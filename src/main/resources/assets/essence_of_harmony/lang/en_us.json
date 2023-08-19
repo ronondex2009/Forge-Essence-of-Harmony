@@ -1,6 +1,8 @@
 {
-    "block.essence_of_harmony.vibrant_wood": "Vibrant Wood",
-    "item.essence_of_harmony.flute": "Flute",
-    "item.essence_of_harmony.ocarina": "Ocarina",
-    "item.essence_of_harmony.guitar": "Overdrive Guitar"
+    "block.essence_of_harmony.notium_ore": "Notium Ore",
+    "block.essence_of_harmony.notium_ore_damaged": "Damaged Notium Ore",
+
+    "item.essence_of_harmony.notium": "Notium Gem",
+    "item.essence_of_harmony.notium_damaged": "Damaged Notium Gem"
+
 }
