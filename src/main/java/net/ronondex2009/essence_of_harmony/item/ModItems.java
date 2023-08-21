@@ -1,4 +1,4 @@
-package net.ronondex2009.item;
+package net.ronondex2009.essence_of_harmony.item;
 
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
@@ -6,7 +6,7 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
-import net.ronondex2009.essence_of_harmony;
+import net.ronondex2009.essence_of_harmony.essence_of_harmony;
 
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, essence_of_harmony.mod_id);

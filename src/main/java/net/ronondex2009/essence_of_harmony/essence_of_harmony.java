@@ -1,4 +1,4 @@
-package net.ronondex2009;
+package net.ronondex2009.essence_of_harmony;
 
 
 
@@ -13,8 +13,9 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.ronondex2009.block.ModBlocks;
-import net.ronondex2009.item.ModItems;
+import net.ronondex2009.essence_of_harmony.block.ModBlocks;
+import net.ronondex2009.essence_of_harmony.item.ModItems;
+import net.ronondex2009.essence_of_harmony.sound.ModSounds;
 
 @Mod(essence_of_harmony.mod_id)
 public class essence_of_harmony {
@@ -36,6 +37,7 @@ public class essence_of_harmony {
         //register all of our mod stuff
         ModItems.register(eventBus);
         ModBlocks.register(eventBus);
+        ModSounds.register(eventBus);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event)
