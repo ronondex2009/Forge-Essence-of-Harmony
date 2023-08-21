@@ -4,8 +4,11 @@ import java.util.Random;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
+<<<<<<< HEAD
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundSource;
+=======
+>>>>>>> cfe8bb1d9534ddf6e5189720bb4c45d91868d27a
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
@@ -28,6 +31,7 @@ public class NotiumOre extends Block {
         super(p_49795_);
     }
     
+<<<<<<< HEAD
     public void attack(BlockState blockState, Level level, BlockPos blockPos, Player player) {
         if(!level.isClientSide())
         {
@@ -69,4 +73,25 @@ public class NotiumOre extends Block {
                 0.5);
         } 
     }
+=======
+   public void attack(BlockState blockState, Level level, BlockPos blockPos, Player player) {
+        player.playSound(ModSounds.NOTIUMDAMAGE.get(), 1, 1);
+        level.setBlock(blockPos, ModBlocks.NOTIUM_ORE_DAMAGED.get().getStateForPlacement(null), UPDATE_ALL_IMMEDIATE, UPDATE_ALL);
+        Random random = new Random();
+        for(int i = 0; i<=50; i++){
+            level.addParticle(ParticleTypes.FLAME , 
+                blockPos.getX() + random.nextDouble(2) - 0.5 , 
+                blockPos.getY() + random.nextDouble(2) - 0.5 , 
+                blockPos.getZ()  + random.nextDouble(2) - 0.5 , 
+                random.nextDouble(0.5)-0.25, random.nextDouble(0.5)-0.25, random.nextDouble(0.5)-0.25);
+        }
+        for(int i = 0; i<=5; i++){
+            level.addParticle(ParticleTypes.NOTE , 
+                blockPos.getX() + random.nextDouble(2) - 0.5 , 
+                blockPos.getY() + random.nextDouble(2) - 0.5 , 
+                blockPos.getZ()  + random.nextDouble(2) - 0.5 , 
+                random.nextDouble(4)-2, random.nextDouble(4)-2, random.nextDouble(4)-2);
+        }
+    }    
+>>>>>>> cfe8bb1d9534ddf6e5189720bb4c45d91868d27a
 }
