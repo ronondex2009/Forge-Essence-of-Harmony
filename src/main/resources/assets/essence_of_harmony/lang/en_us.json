@@ -5,5 +5,7 @@
     "item.essence_of_harmony.notium": "Notium Gem",
     "item.essence_of_harmony.notium_damaged": "Damaged Notium Gem",
 
-    "sounds.essence_of_harmony.notium_sound_damage": "Awful Sounds"
+    "sounds.essence_of_harmony.notium_sound_damage": "Awful Sounds",
+    "sounds.essence_of_harmony.notium_sound_agitate": "Pleasant Sounds"
+
 }

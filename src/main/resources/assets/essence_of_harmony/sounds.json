@@ -4,5 +4,18 @@
         "sounds": [
             "essence_of_harmony:notium_sound_damage"
         ]
+    },
+    "notium_sound_agitate": {
+        "subtitle": "sounds.essence_of_harmony.notium_sound_agitate",
+        "sounds": [
+            "essence_of_harmony:notium_sound_agitate_1",
+            "essence_of_harmony:notium_sound_agitate_1",
+            "essence_of_harmony:notium_sound_agitate_1",
+            "essence_of_harmony:notium_sound_agitate_2",
+            "essence_of_harmony:notium_sound_agitate_2",
+            "essence_of_harmony:notium_sound_agitate_2",
+            "essence_of_harmony:notium_sound_agitate_3",
+            "essence_of_harmony:notium_sound_agitate_4"
+        ]
     }
 }

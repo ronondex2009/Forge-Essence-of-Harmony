@@ -13,6 +13,7 @@ public class ModSounds {
     public static final DeferredRegister<SoundEvent> SOUNDS = DeferredRegister.create(ForgeRegistries.SOUND_EVENTS, essence_of_harmony.mod_id);
 
     public static final RegistryObject<SoundEvent> NOTIUMDAMAGE = registerSoundEvent("notium_sound_damage");
+    public static final RegistryObject<SoundEvent> NOTIUMAGITATE = registerSoundEvent("notium_sound_agitate");
 
     private static RegistryObject<SoundEvent> registerSoundEvent(String name) {
         return SOUNDS.register(name, () -> new SoundEvent(new ResourceLocation(essence_of_harmony.mod_id, name)));
