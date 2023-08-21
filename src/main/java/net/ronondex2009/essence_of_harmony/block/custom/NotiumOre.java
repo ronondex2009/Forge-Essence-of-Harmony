@@ -35,7 +35,5 @@ public class NotiumOre extends Block {
                 blockPos.getZ()  + random.nextDouble(2) - 0.5 , 
                 random.nextDouble(4)-2, random.nextDouble(4)-2, random.nextDouble(4)-2);
         }
-    }
-
-    
+    }    
 }
