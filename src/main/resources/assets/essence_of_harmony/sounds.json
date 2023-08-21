@@ -1,0 +1,8 @@
+{
+    "notium_sound_damage": {
+        "subtitle": "sounds.essence_of_harmony.notium_sound_damage",
+        "sounds": [
+            "essence_of_harmony:notium_sound_damage"
+        ]
+    }
+}
