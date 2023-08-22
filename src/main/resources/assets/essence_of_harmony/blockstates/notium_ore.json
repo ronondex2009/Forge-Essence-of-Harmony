@@ -1,5 +1,6 @@
 {
     "variants": {
-        "": { "model": "essence_of_harmony:block/notium_ore"}
+        "agitated=false": { "model": "essence_of_harmony:block/notium_ore" },
+        "agitated=true": { "model": "essence_of_harmony:block/notium_ore_agitated" }
     }
 }

@@ -34,7 +34,7 @@ public class ModBlocks {
     }
 
     //this is how we make blocks
-    public static final RegistryObject<Block> NOTIUM_ORE = registerBlock("notium_ore", () -> new NotiumOre(BlockBehaviour.Properties.of(Material.STONE).lightLevel(BlockState -> 8).destroyTime(50).requiresCorrectToolForDrops()), CreativeModeTab.TAB_BUILDING_BLOCKS);
+    public static final RegistryObject<Block> NOTIUM_ORE = registerBlock("notium_ore", () -> new NotiumOre(BlockBehaviour.Properties.of(Material.STONE).lightLevel(BlockState -> 8).requiresCorrectToolForDrops().destroyTime(10000000)), CreativeModeTab.TAB_BUILDING_BLOCKS);
     public static final RegistryObject<Block> NOTIUM_ORE_DAMAGED = registerBlock("notium_ore_damaged", () -> new Block(BlockBehaviour.Properties.of(Material.STONE).destroyTime(5).requiresCorrectToolForDrops()), CreativeModeTab.TAB_BUILDING_BLOCKS);
 
     public static void register(IEventBus eventBus)
