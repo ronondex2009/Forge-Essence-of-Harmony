@@ -1,14 +1,21 @@
 package net.ronondex2009.essence_of_harmony.block.custom;
 
 
+import java.util.List;
 import java.util.Random;
+
+import javax.annotation.Nullable;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
@@ -19,6 +26,12 @@ import net.ronondex2009.essence_of_harmony.block.ModBlocks;
 import net.ronondex2009.essence_of_harmony.sound.ModSounds;
 
 public class NotiumOre extends Block {
+
+    @Override
+    public void appendHoverText(ItemStack p_49816_, @Nullable BlockGetter p_49817_, List<Component> components,
+            TooltipFlag p_49819_) {
+        components.add(Component.literal("Must be hit after reverting back to normal three times before turning into damaged notium. \nNote that there is currently no method of mining pure Notium."));
+    }
 
     public static final IntegerProperty TIMESAGITATED = IntegerProperty.create("times_agitated", 0, 3);
     public static final BooleanProperty AGITATED = BooleanProperty.create("agitated");
