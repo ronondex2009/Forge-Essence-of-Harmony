@@ -1,7 +1,5 @@
 package net.ronondex2009.essence_of_harmony.item;
 
-import net.minecraft.sounds.SoundEvents;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.RecordItem;

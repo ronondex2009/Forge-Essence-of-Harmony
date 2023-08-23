@@ -1,7 +1,7 @@
 package net.ronondex2009.essence_of_harmony.event;
 
-import net.minecraft.client.Minecraft;
-import net.minecraft.network.chat.Component;
+//import net.minecraft.client.Minecraft;
+//import net.minecraft.network.chat.Component;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.ScreenEvent.KeyPressed;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -14,7 +14,7 @@ public class ModEventsKeybinding {
     @SubscribeEvent
     public static void keyPress(KeyPressed key){
         if(ModKeyMappings.NOTE_F_SHARP.get().consumeClick()) {
-            Minecraft.getInstance().player.sendSystemMessage(Component.literal("YOOOOOOOO"));
+            //Minecraft.getInstance().player.sendSystemMessage(Component.literal("YOOOOOOOO"));
         }
     }
 }
