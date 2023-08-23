@@ -59,20 +59,19 @@ public class NotiumOre extends Block {
     
     public void attack(BlockState blockState, Level level, BlockPos blockPos, Player player) 
     {
-        if(blockState.getValue(TIMESAGITATED) > 2 && !blockState.getValue(AGITATED))
+        if(blockState.getValue(TIMESAGITATED) > 1 && !blockState.getValue(AGITATED))
         {
             //set the block to Damaged Notium with effect
-            level.playSound(null, blockPos, ModSounds.NOTIUMDAMAGE.get(), SoundSource.BLOCKS, 1, 1);
+            level.playSound(null, blockPos, ModSounds.NOTIUMDAMAGE.get(), SoundSource.BLOCKS, 3, 1);
             SpawnNoteParticle(level, blockPos, random);
             level.setBlock(blockPos, ModBlocks.NOTIUM_ORE_DAMAGED.get().defaultBlockState(), UPDATE_ALL_IMMEDIATE, UPDATE_ALL);
             SpawnDamageParticle(level, blockPos, random);
         }
-        if(blockState.getValue(TIMESAGITATED) <= 2 && !blockState.getValue(AGITATED))
+        if(blockState.getValue(TIMESAGITATED) <= 1 && !blockState.getValue(AGITATED))
         {
-            player.sendSystemMessage(Component.literal(""+blockState.getValue(TIMESAGITATED)));
             //set the block to Agitated Notium with effect
             level.setBlock(blockPos, blockState.cycle(AGITATED), UPDATE_ALL_IMMEDIATE, UPDATE_ALL);
-            level.playSound(null, blockPos, ModSounds.NOTIUMAGITATE.get(), SoundSource.BLOCKS, 1, 1);
+            level.playSound(null, blockPos, ModSounds.NOTIUMAGITATE.get(), SoundSource.BLOCKS, 3, 1);
             SpawnNoteParticle(level, blockPos, random);
         } 
     }   

@@ -2,8 +2,12 @@
     "block.essence_of_harmony.notium_ore": "Notium Ore",
     "block.essence_of_harmony.notium_ore_damaged": "Damaged Notium Ore",
 
+    "itemGroup.essence_of_harmony_tab": "essence_of_harmony",
+
     "item.essence_of_harmony.notium": "Notium Gem",
     "item.essence_of_harmony.notium_damaged": "Damaged Notium Gem",
+    "item.essence_of_harmony.corrupt_disc": "Music Disc",
+    "item.essence_of_harmony.corrupt_disc.desc": "Blue - Corrupt",
 
     "sounds.essence_of_harmony.notium_sound_damage": "Awful Sounds",
     "sounds.essence_of_harmony.notium_sound_agitate": "Pleasant Sounds"

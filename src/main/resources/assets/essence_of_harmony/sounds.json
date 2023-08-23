@@ -17,5 +17,11 @@
             "essence_of_harmony:notium_sound_agitate_3",
             "essence_of_harmony:notium_sound_agitate_4"
         ]
+    },
+    "corrupt_disc": {
+        "subtitle": "music.essence_of_harmony.corrupt_disc",
+        "sounds": [
+            "essence_of_harmony:corrupt_disc"
+        ]
     }
 }
