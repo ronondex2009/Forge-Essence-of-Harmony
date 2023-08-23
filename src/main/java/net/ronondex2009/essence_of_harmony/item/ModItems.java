@@ -15,6 +15,7 @@ public class ModItems {
 
     public static final RegistryObject<Item> NOTIUM = ITEMS.register("notium", () -> new Item(new Item.Properties().stacksTo(16).tab(ModCreativeModeTab.ESSENCE_OF_HARMONY_TAB)));
     public static final RegistryObject<Item> NOTIUM_DAMAGED = ITEMS.register("notium_damaged", () -> new Item(new Item.Properties().stacksTo(16).tab(ModCreativeModeTab.ESSENCE_OF_HARMONY_TAB)));
+    @SuppressWarnings("deprecation")
     public static final RegistryObject<Item> MUSIC_DISC_CORRUPTION = ITEMS.register("corrupt_disc", () -> new RecordItem(1, ModSounds.CORRUPT_DISC.get(), (new Item.Properties()).stacksTo(1).tab(ModCreativeModeTab.ESSENCE_OF_HARMONY_TAB).rarity(Rarity.RARE)));
 
     public static void register(IEventBus eventBus){
