@@ -15,6 +15,7 @@ public class ModSounds {
     public static final RegistryObject<SoundEvent> NOTIUMDAMAGE = registerSoundEvent("notium_sound_damage");
     public static final RegistryObject<SoundEvent> NOTIUMAGITATE = registerSoundEvent("notium_sound_agitate");
     public static final RegistryObject<SoundEvent> CORRUPT_DISC = registerSoundEvent("corrupt_disc");
+    public static final RegistryObject<SoundEvent> FLUTE = registerSoundEvent("flute");
 
     private static RegistryObject<SoundEvent> registerSoundEvent(String name) {
         return SOUNDS.register(name, () -> new SoundEvent(new ResourceLocation(essence_of_harmony.mod_id, name)));

@@ -26,7 +26,7 @@ import net.ronondex2009.essence_of_harmony.block.ModBlocks;
 import net.ronondex2009.essence_of_harmony.sound.ModSounds;
 
 public class NotiumOre extends Block {
-
+    
     @Override
     public void appendHoverText(ItemStack p_49816_, @Nullable BlockGetter p_49817_, List<Component> components,
             TooltipFlag p_49819_) {

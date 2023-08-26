@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "item": "essence_of_harmony:notium"
+    },
+    "title": "Essence of Harmony",
+    "description": "Begin your musical career",
+    "background": "essence_of_harmony:textures/block/notium_ore.png",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "essence_of_harmony:notium_damaged"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 50
+  }
+}

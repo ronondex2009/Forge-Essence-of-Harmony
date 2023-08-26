@@ -23,5 +23,11 @@
         "sounds": [
             "essence_of_harmony:corrupt_disc"
         ]
+    },
+    "flute": {
+        "subtitle": "sounds.essence_of_harmony.flute",
+        "sounds": [
+            "essence_of_harmony:flute"
+        ]
     }
 }

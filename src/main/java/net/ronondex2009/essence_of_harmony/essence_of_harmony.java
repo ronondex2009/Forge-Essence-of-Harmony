@@ -15,6 +15,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.ronondex2009.essence_of_harmony.block.ModBlocks;
 import net.ronondex2009.essence_of_harmony.item.ModItems;
+import net.ronondex2009.essence_of_harmony.networking.ModPacketID;
 import net.ronondex2009.essence_of_harmony.sound.ModSounds;
 
 @Mod(essence_of_harmony.mod_id)
@@ -28,16 +29,14 @@ public class essence_of_harmony {
     {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        //adding ourselves as a listener because we like evesedropping or something idk I never modded before
         eventBus.addListener(this::commonSetup);
 
-        //I dont know what this does
         MinecraftForge.EVENT_BUS.register(this);
 
-        //register all of our mod stuff
         ModItems.register(eventBus);
         ModBlocks.register(eventBus);
         ModSounds.register(eventBus);
+        ModPacketID.register();
     }
 
     private void commonSetup(final FMLCommonSetupEvent event)
