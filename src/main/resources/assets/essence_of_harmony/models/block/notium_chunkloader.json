@@ -1,0 +1,58 @@
+{
+	"credit": "Made with Blockbench",
+	"texture_size": [32, 32],
+	"textures": {
+		"0": "essence_of_harmony:block/notium_chunkloader_texture",
+		"particle": "essence_of_harmony:block/notium_chunkloader_texture"
+	},
+	"elements": [
+		{
+			"from": [4, 0, 4],
+			"to": [12, 2, 12],
+			"faces": {
+				"north": {"uv": [4, 6, 8, 7], "texture": "#0"},
+				"east": {"uv": [7, 0, 11, 1], "texture": "#0"},
+				"south": {"uv": [7, 1, 11, 2], "texture": "#0"},
+				"west": {"uv": [7, 2, 11, 3], "texture": "#0"},
+				"up": {"uv": [4, 4, 0, 0], "texture": "#0"},
+				"down": {"uv": [4, 4, 0, 8], "texture": "#0"}
+			}
+		},
+		{
+			"from": [6, 2, 6],
+			"to": [10, 5, 10],
+			"faces": {
+				"north": {"uv": [2, 8, 4, 9.5], "texture": "#0"},
+				"east": {"uv": [9, 3, 11, 4.5], "texture": "#0"},
+				"south": {"uv": [4, 9, 6, 10.5], "texture": "#0"},
+				"west": {"uv": [6, 9, 8, 10.5], "texture": "#0"},
+				"up": {"uv": [9, 5, 7, 3], "texture": "#0"},
+				"down": {"uv": [6, 7, 4, 9], "texture": "#0"}
+			}
+		},
+		{
+			"from": [5, 5, 5],
+			"to": [11, 7, 11],
+			"faces": {
+				"north": {"uv": [7, 5, 10, 6], "texture": "#0"},
+				"east": {"uv": [8, 6, 11, 7], "texture": "#0"},
+				"south": {"uv": [8, 7, 11, 8], "texture": "#0"},
+				"west": {"uv": [8, 8, 11, 9], "texture": "#0"},
+				"up": {"uv": [7, 3, 4, 0], "texture": "#0"},
+				"down": {"uv": [7, 3, 4, 6], "texture": "#0"}
+			}
+		},
+		{
+			"from": [6, 7, 6],
+			"to": [10, 8, 10],
+			"faces": {
+				"north": {"uv": [9, 4.5, 11, 5], "texture": "#0"},
+				"east": {"uv": [8, 9, 10, 9.5], "texture": "#0"},
+				"south": {"uv": [2, 9.5, 4, 10], "texture": "#0"},
+				"west": {"uv": [8, 9.5, 10, 10], "texture": "#0"},
+				"up": {"uv": [8, 9, 6, 7], "texture": "#0"},
+				"down": {"uv": [2, 8, 0, 10], "texture": "#0"}
+			}
+		}
+	]
+}
