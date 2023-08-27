@@ -2,11 +2,7 @@ package net.ronondex2009.essence_of_harmony.world.features;
 
 import java.util.List;
 
-import net.minecraft.core.Holder;
 import net.minecraft.core.Registry;
-import net.minecraft.data.worldgen.features.OreFeatures;
-import net.minecraft.data.worldgen.placement.OrePlacements;
-import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.world.level.levelgen.VerticalAnchor;
 import net.minecraft.world.level.levelgen.placement.BiomeFilter;
 import net.minecraft.world.level.levelgen.placement.CountPlacement;

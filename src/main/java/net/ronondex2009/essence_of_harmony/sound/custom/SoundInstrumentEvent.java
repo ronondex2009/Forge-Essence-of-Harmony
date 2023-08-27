@@ -2,18 +2,13 @@ package net.ronondex2009.essence_of_harmony.sound.custom;
 
 import java.util.UUID;
 
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.client.resources.sounds.AbstractTickableSoundInstance;
 import net.minecraft.client.resources.sounds.SoundInstance;
 import net.minecraft.client.sounds.SoundManager;
-import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.RandomSource;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
-import net.ronondex2009.essence_of_harmony.networking.packets.StopNoteC2CPacket;
 import net.ronondex2009.essence_of_harmony.networking.packets.StopNoteC2CPacket.updateCurrentlyPlayingNotes;
 import net.ronondex2009.essence_of_harmony.util.PitchDict;
 import net.ronondex2009.essence_of_harmony.util.notes;
