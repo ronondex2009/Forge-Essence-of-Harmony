@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "OO ",
+        "  O",
+        "   "
+    ],
+    "key": {
+        "O": {
+            "item": "essence_of_harmony:notium_damaged"
+        }
+    },
+    "result": {
+        "item": "essence_of_harmony:guitar_demo"
+    }
+}

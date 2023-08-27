@@ -6,8 +6,6 @@ import java.util.function.Supplier;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.network.FriendlyByteBuf;
-import net.minecraft.network.chat.Component;
-import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.item.ItemStack;
@@ -47,6 +45,8 @@ public class PlayNoteC2CPacket {
             ItemStack item = instance.level.getPlayerByUUID(msg.sender).getMainHandItem();
             if(item.getItem()==ModItems.FLUTE.get()) soundToUse = ModSounds.FLUTE.get();
             if(item.getItem()==ModItems.OCARINA.get()) soundToUse = ModSounds.OCARINA.get();
+            if(item.getItem()==ModItems.GUITAR.get()) soundToUse = ModSounds.GUITAR.get();
+            if(item.getItem()==ModItems.OVERDRIVE_GUITAR.get()) soundToUse = ModSounds.OVERDRIVE_GUITAR.get();
             if(soundToUse!=null)
             {
                 SoundInstrumentEvent instrument = new SoundInstrumentEvent(soundToUse, SoundSource.PLAYERS, null, msg.note, msg.sender, instance.level);

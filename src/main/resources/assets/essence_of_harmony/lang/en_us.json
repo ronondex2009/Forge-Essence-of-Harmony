@@ -7,6 +7,9 @@
     "item.essence_of_harmony.notium": "Notium Gem",
     "item.essence_of_harmony.flute": "Flute",
     "item.essence_of_harmony.ocarina": "Ocarina",
+    "item.essence_of_harmony.guitar_demo": "Guitar (temporary item will be removed in the future!)",
+    "item.essence_of_harmony.overdrive_guitar_demo": "Overdrive Guitar (temporary item will be removed in the future!)",
+
     "item.essence_of_harmony.notium_damaged": "Damaged Notium Gem",
     "item.essence_of_harmony.corrupt_disc": "Music Disc",
     "item.essence_of_harmony.corrupt_disc.desc": "Blue - Corrupt",
@@ -15,6 +18,10 @@
     "sounds.essence_of_harmony.notium_sound_agitate": "Pleasant Sounds",
     "sounds.essence_of_harmony.flute": "Flute Sounds",
     "sounds.essence_of_harmony.ocarina": "Ocarina Sounds",
+    "sounds.essence_of_harmony.guitar": "Guitar Sounds",
+    "sounds.essence_of_harmony.overdrive_guitar": "Overdrive Guitar Sounds",
+
+
 
     "music.essence_of_harmony.corrupt_disc": "Music"
 
