@@ -1,0 +1,25 @@
+{
+    "parent": "essence_of_harmony:notium",
+    "display": {
+        "icon": {
+            "item": "essence_of_harmony:ocarina"
+        },
+        "title": "High Quality Designs",
+        "description": "Craft an ocarina"
+    },
+    "criteria": {
+        "conditions": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": [ "essence_of_harmony:ocarina" ]
+                    }
+                ]
+            }
+        }
+    },
+    "rewards": {
+        "experience": 20
+    }
+}

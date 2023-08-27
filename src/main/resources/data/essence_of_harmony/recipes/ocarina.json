@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "###",
+        "#O#",
+        " # "
+    ],
+    "key": {
+        "#": {
+            "tag": "minecraft:planks"
+        },
+        "O": {
+            "item": "essence_of_harmony:notium"
+        }
+    },
+    "result": {
+        "item": "essence_of_harmony:ocarina"
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "tag": "music_discs"
+        },
+        {
+            "item": "essence_of_harmony:notium"
+        }
+    ],
+    "result": {
+        "item": "essence_of_harmony:corrupt_disc"
+    }
+}

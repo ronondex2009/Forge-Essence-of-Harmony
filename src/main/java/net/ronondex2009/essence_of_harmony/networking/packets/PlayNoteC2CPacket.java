@@ -46,12 +46,12 @@ public class PlayNoteC2CPacket {
             SoundEvent soundToUse = null;
             ItemStack item = instance.level.getPlayerByUUID(msg.sender).getMainHandItem();
             if(item.getItem()==ModItems.FLUTE.get()) soundToUse = ModSounds.FLUTE.get();
+            if(item.getItem()==ModItems.OCARINA.get()) soundToUse = ModSounds.OCARINA.get();
             if(soundToUse!=null)
             {
                 SoundInstrumentEvent instrument = new SoundInstrumentEvent(soundToUse, SoundSource.PLAYERS, null, msg.note, msg.sender, instance.level);
                 instance.getSoundManager().play(instrument);
                 StopNoteC2CPacket.listeners.add(instrument);
-                instance.player.sendSystemMessage(Component.literal("its goin"));
             }
         });
     }

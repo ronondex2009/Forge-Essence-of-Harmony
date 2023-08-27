@@ -17,6 +17,8 @@ import net.ronondex2009.essence_of_harmony.block.ModBlocks;
 import net.ronondex2009.essence_of_harmony.item.ModItems;
 import net.ronondex2009.essence_of_harmony.networking.ModPacketID;
 import net.ronondex2009.essence_of_harmony.sound.ModSounds;
+import net.ronondex2009.essence_of_harmony.world.features.ModConfiguredFeatures;
+import net.ronondex2009.essence_of_harmony.world.features.ModPlacedFeatures;
 
 @Mod(essence_of_harmony.mod_id)
 public class essence_of_harmony {
@@ -37,6 +39,8 @@ public class essence_of_harmony {
         ModBlocks.register(eventBus);
         ModSounds.register(eventBus);
         ModPacketID.register();
+        ModConfiguredFeatures.register(eventBus);
+        ModPlacedFeatures.register(eventBus);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event)

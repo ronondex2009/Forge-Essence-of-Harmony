@@ -1,9 +1,6 @@
 package net.ronondex2009.essence_of_harmony.event;
 
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.player.AbstractClientPlayer;
-import net.minecraft.network.chat.Component;
-import net.minecraft.sounds.SoundSource;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.InputEvent;
 import net.minecraftforge.client.event.RegisterKeyMappingsEvent;
@@ -15,9 +12,6 @@ import net.ronondex2009.essence_of_harmony.essence_of_harmony;
 import net.ronondex2009.essence_of_harmony.networking.ModPacketID;
 import net.ronondex2009.essence_of_harmony.networking.packets.PlayNoteC2CPacket;
 import net.ronondex2009.essence_of_harmony.networking.packets.StopNoteC2CPacket;
-import net.ronondex2009.essence_of_harmony.networking.packets.StopNoteC2CPacket.updateCurrentlyPlayingNotes;
-import net.ronondex2009.essence_of_harmony.sound.ModSounds;
-import net.ronondex2009.essence_of_harmony.sound.custom.SoundInstrumentEvent;
 import net.ronondex2009.essence_of_harmony.util.ModKeyMappings;
 import net.ronondex2009.essence_of_harmony.util.notes;
 
@@ -45,16 +39,16 @@ public class ClientEvents {
         {
             Minecraft instance = Minecraft.getInstance();
             if(ModKeyMappings.PLAYING_KEY_C.consumeClick() && !is_down_C) { playNote(notes.C, instance); is_down_C=true; }
-            if(ModKeyMappings.PLAYING_KEY_C_SHARP.consumeClick() && !is_down_CS) { playNote(notes.CS, instance); is_down_CS=true; }
+            //if(ModKeyMappings.PLAYING_KEY_C_SHARP.consumeClick() && !is_down_CS) { playNote(notes.CS, instance); is_down_CS=true; }
             if(ModKeyMappings.PLAYING_KEY_D.consumeClick() && !is_down_D) { playNote(notes.D, instance); is_down_D=true; }
-            if(ModKeyMappings.PLAYING_KEY_D_SHARP.consumeClick() && !is_down_DS) { playNote(notes.DS, instance); is_down_DS=true; }
+            //if(ModKeyMappings.PLAYING_KEY_D_SHARP.consumeClick() && !is_down_DS) { playNote(notes.DS, instance); is_down_DS=true; }
             if(ModKeyMappings.PLAYING_KEY_E.consumeClick() && !is_down_E) { playNote(notes.E, instance); is_down_E=true; }
             if(ModKeyMappings.PLAYING_KEY_F.consumeClick() && !is_down_F) { playNote(notes.F, instance); is_down_F=true; }
-            if(ModKeyMappings.PLAYING_KEY_F_SHARP.consumeClick() && !is_down_FS) { playNote(notes.FS, instance); is_down_FS=true; }
+            //if(ModKeyMappings.PLAYING_KEY_F_SHARP.consumeClick() && !is_down_FS) { playNote(notes.FS, instance); is_down_FS=true; }
             if(ModKeyMappings.PLAYING_KEY_G.consumeClick() && !is_down_G) { playNote(notes.G, instance); is_down_G=true; }
-            if(ModKeyMappings.PLAYING_KEY_G_SHARP.consumeClick() && !is_down_GS) { playNote(notes.GS, instance); is_down_GS=true; }
+            //if(ModKeyMappings.PLAYING_KEY_G_SHARP.consumeClick() && !is_down_GS) { playNote(notes.GS, instance); is_down_GS=true; }
             if(ModKeyMappings.PLAYING_KEY_A.consumeClick() && !is_down_A) { playNote(notes.A, instance); is_down_A=true; }
-            if(ModKeyMappings.PLAYING_KEY_A_SHARP.consumeClick() && !is_down_AS) { playNote(notes.AS, instance); is_down_AS=true; }
+            //if(ModKeyMappings.PLAYING_KEY_A_SHARP.consumeClick() && !is_down_AS) { playNote(notes.AS, instance); is_down_AS=true; }
             if(ModKeyMappings.PLAYING_KEY_B.consumeClick() && !is_down_B) { playNote(notes.B, instance); is_down_B=true; }
         }
             @SubscribeEvent

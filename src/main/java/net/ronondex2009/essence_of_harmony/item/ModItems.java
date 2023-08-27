@@ -14,6 +14,7 @@ public class ModItems {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, essence_of_harmony.mod_id);
 
     public static final RegistryObject<Item> FLUTE = ITEMS.register("flute", () -> new Item(new Item.Properties().stacksTo(1).tab(ModCreativeModeTab.ESSENCE_OF_HARMONY_TAB)));
+    public static final RegistryObject<Item> OCARINA = ITEMS.register("ocarina", () -> new Item(new Item.Properties().stacksTo(1).tab(ModCreativeModeTab.ESSENCE_OF_HARMONY_TAB)));
     public static final RegistryObject<Item> NOTIUM = ITEMS.register("notium", () -> new Item(new Item.Properties().stacksTo(16).tab(ModCreativeModeTab.ESSENCE_OF_HARMONY_TAB)));
     public static final RegistryObject<Item> NOTIUM_DAMAGED = ITEMS.register("notium_damaged", () -> new Item(new Item.Properties().stacksTo(16).tab(ModCreativeModeTab.ESSENCE_OF_HARMONY_TAB)));
     @SuppressWarnings("deprecation")

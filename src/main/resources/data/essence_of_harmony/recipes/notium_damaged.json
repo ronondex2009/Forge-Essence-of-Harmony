@@ -1,0 +1,12 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "essence_of_harmony:notium"
+        }
+    ],
+    "result": {
+        "item": "essence_of_harmony:notium_damaged",
+        "count": 4
+    }
+}

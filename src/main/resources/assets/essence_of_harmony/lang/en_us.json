@@ -5,6 +5,8 @@
     "itemGroup.essence_of_harmony_tab": "Essence of Harmony",
 
     "item.essence_of_harmony.notium": "Notium Gem",
+    "item.essence_of_harmony.flute": "Flute",
+    "item.essence_of_harmony.ocarina": "Ocarina",
     "item.essence_of_harmony.notium_damaged": "Damaged Notium Gem",
     "item.essence_of_harmony.corrupt_disc": "Music Disc",
     "item.essence_of_harmony.corrupt_disc.desc": "Blue - Corrupt",
@@ -12,6 +14,7 @@
     "sounds.essence_of_harmony.notium_sound_damage": "Awful Sounds",
     "sounds.essence_of_harmony.notium_sound_agitate": "Pleasant Sounds",
     "sounds.essence_of_harmony.flute": "Flute Sounds",
+    "sounds.essence_of_harmony.ocarina": "Ocarina Sounds",
 
     "music.essence_of_harmony.corrupt_disc": "Music"
 

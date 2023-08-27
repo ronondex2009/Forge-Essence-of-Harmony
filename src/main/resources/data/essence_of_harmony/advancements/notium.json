@@ -1,0 +1,30 @@
+{
+    "parent": "essence_of_harmony:root",
+    "display": {
+        "icon": {
+            "item": "essence_of_harmony:notium"
+        },
+        "title": "Gems of Sound",
+        "description": "obtain a notium gem by using six damaged gems in a crafting grid",
+        "announce_to_chat": true
+    },
+    "criteria": {
+        "requirement": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": [ "essence_of_harmony:notium" ]
+                    }
+                ]
+            }
+        }
+    },
+    "rewards": {
+        "experience": 10,
+        "recipes": [
+            "essence_of_harmony:notium_damaged",
+            "essence_of_harmony:ocarina"
+        ]
+    }
+}

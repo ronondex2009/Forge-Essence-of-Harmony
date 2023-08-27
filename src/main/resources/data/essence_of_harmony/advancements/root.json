@@ -1,11 +1,11 @@
 {
   "display": {
     "icon": {
-      "item": "essence_of_harmony:notium"
+      "item": "essence_of_harmony:notium_damaged"
     },
     "title": "Essence of Harmony",
     "description": "Begin your musical career",
-    "background": "essence_of_harmony:textures/block/notium_ore.png",
+    "background": "essence_of_harmony:textures/block/notium_ore_damaged.png",
     "show_toast": true,
     "announce_to_chat": true
   },
@@ -24,6 +24,10 @@
     }
   },
   "rewards": {
-    "experience": 50
+    "experience": 50,
+    "recipes": [
+      "essence_of_harmony:flute",
+      "essence_of_harmony:notium"
+    ]
   }
 }

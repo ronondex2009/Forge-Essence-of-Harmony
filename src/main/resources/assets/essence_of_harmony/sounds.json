@@ -29,5 +29,23 @@
         "sounds": [
             "essence_of_harmony:flute"
         ]
+    },
+    "ocarina": {
+        "subtitle": "sounds.essence_of_harmony.ocarina",
+        "sounds": [
+            "essence_of_harmony:ocarina"
+        ]
+    },
+    "guitar": {
+        "subtitle": "sounds.essence_of_harmony.guitar",
+        "sounds": [
+            "essence_of_harmony:guitar"
+        ]
+    },
+    "overdrive_guitar": {
+        "subtitle": "sounds.essence_of_harmony.overdrive_guitar",
+        "sounds": [
+            "essence_of_harmony:overdrive_guitar"
+        ]
     }
 }

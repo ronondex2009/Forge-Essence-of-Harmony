@@ -2,8 +2,8 @@
     "type": "minecraft:crafting_shaped",
     "pattern": [
         " *#",
-        "*# ",
-        "#  "
+        "*#O",
+        "#O "
     ],
     "key": {
         "#": {
@@ -11,6 +11,9 @@
         },
         "*": {
             "item": "minecraft:stone_button"
+        },
+        "O": {
+            "item": "essence_of_harmony:notium_damaged"
         }
     },
     "result": {
