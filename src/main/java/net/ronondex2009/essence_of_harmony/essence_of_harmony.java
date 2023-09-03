@@ -39,7 +39,6 @@ public class essence_of_harmony {
         ModItems.register(eventBus);
         ModBlocks.register(eventBus);
         ModSounds.register(eventBus);
-        ModPacketID.register();
         ModConfiguredFeatures.register(eventBus);
         ModPlacedFeatures.register(eventBus);
         ModSpells.register();
@@ -48,6 +47,9 @@ public class essence_of_harmony {
     private void commonSetup(final FMLCommonSetupEvent event)
     {
         LOGGER.info("HELLO HOW ARE YOU?");
+        event.enqueueWork(() -> {
+            ModPacketID.register();
+        });
     }
 
     @SubscribeEvent
