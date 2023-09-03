@@ -11,13 +11,6 @@ import net.ronondex2009.essence_of_harmony.util.AbstractSymbol;
 import net.ronondex2009.essence_of_harmony.util.Spell;
 import net.ronondex2009.essence_of_harmony.util.notes;
 
-/*
- * for clarification, there is no such thing as a
- * vanilla spell. Spells are a functionality
- * added by EOH. Feel free to add your own spells
- * in a separate mod.
- */
-
 public class ModSpells 
 {
     public static final Spell TESTING_SPELL = new TestingSpell();
