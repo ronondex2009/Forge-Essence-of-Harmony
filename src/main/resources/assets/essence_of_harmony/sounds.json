@@ -47,5 +47,11 @@
         "sounds": [
             "essence_of_harmony:overdrive_guitar"
         ]
+    },
+    "spell_cast": {
+        "subtitle": "sounds.essence_of_harmony.spell_cast",
+        "sounds": [
+            "essence_of_harmony:spell_cast_effect"
+        ]
     }
 }

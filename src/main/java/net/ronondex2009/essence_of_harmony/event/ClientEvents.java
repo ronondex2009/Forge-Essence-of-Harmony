@@ -1,6 +1,10 @@
 package net.ronondex2009.essence_of_harmony.event;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import net.minecraft.client.Minecraft;
+import net.minecraft.network.chat.Component;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.InputEvent;
 import net.minecraftforge.client.event.RegisterKeyMappingsEvent;
@@ -10,8 +14,11 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.network.PacketDistributor;
 import net.ronondex2009.essence_of_harmony.essence_of_harmony;
 import net.ronondex2009.essence_of_harmony.networking.ModPacketID;
+import net.ronondex2009.essence_of_harmony.networking.packets.CheckSpellC2SPacket;
 import net.ronondex2009.essence_of_harmony.networking.packets.PlayNoteC2CPacket;
 import net.ronondex2009.essence_of_harmony.networking.packets.StopNoteC2CPacket;
+import net.ronondex2009.essence_of_harmony.spell.ModSpells;
+import net.ronondex2009.essence_of_harmony.util.AbstractSymbol;
 import net.ronondex2009.essence_of_harmony.util.ModKeyMappings;
 import net.ronondex2009.essence_of_harmony.util.notes;
 
@@ -91,20 +98,30 @@ public class ClientEvents {
         }
     }
 
+    public static List<notes> notesPlayed = new ArrayList<>();
+    public static List<AbstractSymbol> stack = new ArrayList<>();
+
     private static void playNote(notes note, Minecraft instance)
     {
         if(instance.player==null) return;
         
         ModPacketID.INSTANCE.send(PacketDistributor.ALL.noArg(), new PlayNoteC2CPacket(note, instance.player.getUUID()));
-        
 
+        notesPlayed.add(note);
     }
+
+
     private static void stopNote(notes note, Minecraft instance)
     {
         if(instance.player==null) return;
 
-        //unfinished packet..
         ModPacketID.INSTANCE.send(PacketDistributor.ALL.noArg(), new StopNoteC2CPacket(note, instance.player.getUUID())); 
-        //TODO get rid of item checking, otherwise multiple instruments can be used at once.
+
+        if(ModSpells.checkSpells(notesPlayed, stack, instance.player, instance.level))
+        {
+            ModPacketID.INSTANCE.sendToServer(new CheckSpellC2SPacket(stack, notesPlayed));
+            notesPlayed.clear();
+        } 
     } 
+    
 }

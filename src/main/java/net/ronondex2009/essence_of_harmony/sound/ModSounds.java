@@ -19,7 +19,7 @@ public class ModSounds {
     public static final RegistryObject<SoundEvent> OCARINA = registerSoundEvent("ocarina");
     public static final RegistryObject<SoundEvent> GUITAR = registerSoundEvent("guitar");
     public static final RegistryObject<SoundEvent> OVERDRIVE_GUITAR = registerSoundEvent("overdrive_guitar");
-
+    public static final RegistryObject<SoundEvent> CAST_SPELL = registerSoundEvent("spell_cast");
 
     private static RegistryObject<SoundEvent> registerSoundEvent(String name) {
         return SOUNDS.register(name, () -> new SoundEvent(new ResourceLocation(essence_of_harmony.mod_id, name)));
