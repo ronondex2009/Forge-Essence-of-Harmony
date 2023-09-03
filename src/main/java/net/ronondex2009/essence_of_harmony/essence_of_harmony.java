@@ -2,6 +2,10 @@ package net.ronondex2009.essence_of_harmony;
 
 
 
+import net.ronondex2009.essence_of_harmony.spell.custom.ClearStackSpell;
+import net.ronondex2009.essence_of_harmony.spell.custom.RevealStackSpell;
+import net.ronondex2009.essence_of_harmony.spell.custom.SelfOperator;
+import net.ronondex2009.essence_of_harmony.spell.custom.TestingSpell;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -41,7 +45,12 @@ public class essence_of_harmony {
         ModSounds.register(eventBus);
         ModConfiguredFeatures.register(eventBus);
         ModPlacedFeatures.register(eventBus);
-        ModSpells.register();
+
+
+        ModSpells.register(new TestingSpell());
+        ModSpells.register(new RevealStackSpell());
+        ModSpells.register(new ClearStackSpell());
+        ModSpells.register(new SelfOperator());
     }
 
     private void commonSetup(final FMLCommonSetupEvent event)
