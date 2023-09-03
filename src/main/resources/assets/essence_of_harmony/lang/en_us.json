@@ -22,6 +22,18 @@
     "sounds.essence_of_harmony.overdrive_guitar": "Overdrive Guitar Sounds",
     "sounds.essence_of_harmony.cast_spell": "Spell Casting Sound",
     
-    "music.essence_of_harmony.corrupt_disc": "Music"
+    "music.essence_of_harmony.corrupt_disc": "Music",
 
+    "key.essence_of_harmony.f#": "(A) Play F#",
+    "key.essence_of_harmony.g": "(B) Play G",
+    "key.essence_of_harmony.g#": "(C) Play G#",
+    "key.essence_of_harmony.a": "(D) Play A",
+    "key.essence_of_harmony.a#": "(E) Play A#",
+    "key.essence_of_harmony.b": "(F) Play B",
+    "key.essence_of_harmony.c": "(G) Play C",
+    "key.essence_of_harmony.c#": "(H) Play C#",
+    "key.essence_of_harmony.d": "(I) Play D",
+    "key.essence_of_harmony.d#": "(J) Play D#",
+    "key.essence_of_harmony.e": "(K) Play E",
+    "key.essence_of_harmony.f": "(L) Play F"
 }
