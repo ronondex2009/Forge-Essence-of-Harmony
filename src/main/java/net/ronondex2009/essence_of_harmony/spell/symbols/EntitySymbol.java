@@ -2,16 +2,17 @@ package net.ronondex2009.essence_of_harmony.spell.symbols;
 
 import java.io.Serializable;
 
+import net.minecraft.world.entity.Entity;
 import net.ronondex2009.essence_of_harmony.util.AbstractSymbol;
 
-public class IntSymbol extends AbstractSymbol implements Serializable
+public class EntitySymbol extends AbstractSymbol implements Serializable
 {
-    private String type = "Integer";
+    private String type = "Entity";
     private int Value;
-    public IntSymbol(int Value) {this.Value = Value;}
+    public EntitySymbol(Entity Value) {this.Value = Value.getId();}
     public String toString()
     {
-        return "Int:"+Value;
+        return "Entity:"+Value;
     }
     public int getValue() { return Value; }
 }

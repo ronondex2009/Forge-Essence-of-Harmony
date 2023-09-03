@@ -7,8 +7,10 @@ import java.util.function.Supplier;
 import net.minecraft.client.Minecraft;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.sounds.SoundEvent;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraftforge.network.NetworkEvent;
 import net.ronondex2009.essence_of_harmony.item.ModItems;
 import net.ronondex2009.essence_of_harmony.sound.ModSounds;
@@ -47,6 +49,7 @@ public class PlayNoteC2CPacket {
             if(item.getItem()==ModItems.OCARINA.get()) soundToUse = ModSounds.OCARINA.get();
             if(item.getItem()==ModItems.GUITAR.get()) soundToUse = ModSounds.GUITAR.get();
             if(item.getItem()==ModItems.OVERDRIVE_GUITAR.get()) soundToUse = ModSounds.OVERDRIVE_GUITAR.get();
+            if(item.getItem()==Items.NOTE_BLOCK.asItem()) soundToUse = SoundEvents.NOTE_BLOCK_HARP;
             if(soundToUse!=null)
             {
                 SoundInstrumentEvent instrument = new SoundInstrumentEvent(soundToUse, SoundSource.PLAYERS, null, msg.note, msg.sender, instance.level);

@@ -17,6 +17,7 @@ import net.minecraft.network.FriendlyByteBuf;
 import net.minecraftforge.network.NetworkEvent;
 import net.ronondex2009.essence_of_harmony.spell.ModSpells;
 import net.ronondex2009.essence_of_harmony.spell.symbols.IntSymbol;
+import net.ronondex2009.essence_of_harmony.spell.symbols.TrashSymbol;
 import net.ronondex2009.essence_of_harmony.util.AbstractSymbol;
 import net.ronondex2009.essence_of_harmony.util.notes;
 
@@ -74,7 +75,7 @@ public class CheckSpellC2SPacket
         try (ObjectOutputStream ois = new ObjectOutputStream(boas)) {
             ois.writeObject(obj);
             return boas.toByteArray();
-        } catch (IOException e) { return null; }
+        } catch (IOException e) { return convertObjectToBytes(new TrashSymbol()); }
     }
 
     @SuppressWarnings("unchecked")
@@ -82,6 +83,6 @@ public class CheckSpellC2SPacket
         InputStream is = new ByteArrayInputStream(bytes);
         try (ObjectInputStream ois = new ObjectInputStream(is)) {
             return (T) ois.readObject();
-        } catch (IOException e) { return null; } catch (ClassNotFoundException e) { return null; }
+        } catch (IOException e) { return (T) new ArrayList<AbstractSymbol>(); } catch (ClassNotFoundException e) { return (T) new ArrayList<AbstractSymbol>(); }
     }
 }
