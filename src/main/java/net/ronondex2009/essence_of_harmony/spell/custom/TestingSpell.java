@@ -24,9 +24,8 @@ public class TestingSpell extends Spell {
 
     public boolean runSpell(List<AbstractSymbol> stack, Player player, Level level)
     {
-        if(!level.isClientSide) player.sendSystemMessage(Component.literal("DEBUGGING!!!!"));
-        stack.add(new IntSymbol(1));
         player.playSound(ModSounds.CAST_SPELL.get());
+        stack.add(new IntSymbol(1));
         return true;
     }
 
