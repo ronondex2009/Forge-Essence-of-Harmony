@@ -14,4 +14,5 @@ public class IntSymbol extends AbstractSymbol implements Serializable
         return "Int:"+Value;
     }
     public int getValue() { return Value; }
+    public String getSymbolType() {return type;}
 }

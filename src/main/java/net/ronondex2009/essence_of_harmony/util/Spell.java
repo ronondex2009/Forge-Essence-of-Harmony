@@ -10,8 +10,7 @@ import net.minecraft.world.level.Level;
 public class Spell 
 {
     
-    public List<AbstractSymbol> allowedInputs = new ArrayList<>(); //can be empty TODO unused
-    public List<AbstractSymbol> allowedOutputs = new ArrayList<>(); //can be empty TODO unused
+    public List<String> allowedInputs = new ArrayList<>(); //can be empty TODO unused
     public List<Item> allowedInstruments = new ArrayList<>(); //if empty, will default to all instruments. TODO unused
     public List<notes> spellNotes = new ArrayList<>(); //cannot be empty
     public int baseEssenceUsage = 0; //default value TODO add when feature exists
@@ -20,7 +19,11 @@ public class Spell
     public boolean checkSpell(List<notes> notesToCheck, List<AbstractSymbol> stack, Player player, Level level)
     {
         if(!isEnabled) return false;
-        if(spellNotes.equals(notesToCheck)) return runSpell(stack, player, level);
+        boolean isValid = false;
+        //for(Item item : allowedInstruments)
+            //if(item.equals(player.getMainHandItem().getItem()))
+                isValid = true;
+        if(spellNotes.equals(notesToCheck)&&isValid) return runSpell(stack, player, level);
         else return false;
     }
 

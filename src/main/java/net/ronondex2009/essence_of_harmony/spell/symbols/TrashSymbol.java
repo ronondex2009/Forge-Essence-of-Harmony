@@ -2,7 +2,6 @@ package net.ronondex2009.essence_of_harmony.spell.symbols;
 
 import java.io.Serializable;
 
-import net.minecraft.world.entity.Entity;
 import net.ronondex2009.essence_of_harmony.util.AbstractSymbol;
 
 public class TrashSymbol extends AbstractSymbol implements Serializable
@@ -13,4 +12,5 @@ public class TrashSymbol extends AbstractSymbol implements Serializable
     {
         return "BROKEN -- SOMETHING WENT WRONG IN THE MOD!";
     }
+    public String getSymbolType() {return type;}
 }

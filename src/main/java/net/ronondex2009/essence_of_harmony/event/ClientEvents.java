@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import net.minecraft.client.Minecraft;
-import net.minecraft.network.chat.Component;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.InputEvent;
 import net.minecraftforge.client.event.RegisterKeyMappingsEvent;
@@ -117,11 +116,10 @@ public class ClientEvents {
 
         ModPacketID.INSTANCE.send(PacketDistributor.ALL.noArg(), new StopNoteC2CPacket(note, instance.player.getUUID())); 
 
-        if(ModSpells.checkSpells(notesPlayed, stack, instance.player, instance.level))
-        {
-            ModPacketID.INSTANCE.sendToServer(new CheckSpellC2SPacket(stack, notesPlayed));
-            notesPlayed.clear();
-        } 
+        if(ModSpells.checkSpells(notesPlayed, stack, instance.player, instance.level)) notesPlayed.clear();;
+        
+        ModPacketID.INSTANCE.sendToServer(new CheckSpellC2SPacket(stack, notesPlayed));
+        
     } 
     
 }

@@ -18,4 +18,5 @@ public class VectorSymbol extends AbstractSymbol implements Serializable
     public double getX() { return x; }
     public double getY() { return y; }
     public double getZ() { return z; }
+    public String getSymbolType() {return type;}
 }

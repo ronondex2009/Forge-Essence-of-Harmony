@@ -7,6 +7,6 @@ package net.ronondex2009.essence_of_harmony.util;
  */
 public abstract class AbstractSymbol {
     String type;
-    public String getType() {return type;}
+    public String getSymbolType() {return type;}
     //data types are defined  
 }

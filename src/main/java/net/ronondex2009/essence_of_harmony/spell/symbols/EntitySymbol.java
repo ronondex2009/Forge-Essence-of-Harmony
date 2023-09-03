@@ -15,4 +15,5 @@ public class EntitySymbol extends AbstractSymbol implements Serializable
         return "Entity:"+Value;
     }
     public int getValue() { return Value; }
+    public String getSymbolType() {return type;}
 }
