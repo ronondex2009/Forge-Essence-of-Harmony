@@ -21,6 +21,7 @@ public class RevealStackSpell extends Spell
 
     public RevealStackSpell()
     {
+        super();
         spellNotes.add(notes.G);
         spellNotes.add(notes.F);
         spellNotes.add(notes.G);

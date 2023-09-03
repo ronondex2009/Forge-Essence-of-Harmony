@@ -46,11 +46,10 @@ public class essence_of_harmony {
         ModConfiguredFeatures.register(eventBus);
         ModPlacedFeatures.register(eventBus);
 
-
-        ModSpells.register(new TestingSpell());
-        ModSpells.register(new RevealStackSpell());
-        ModSpells.register(new ClearStackSpell());
-        ModSpells.register(new SelfOperator());
+        new ClearStackSpell();
+        new RevealStackSpell();
+        new SelfOperator();
+        new TestingSpell();
     }
 
     private void commonSetup(final FMLCommonSetupEvent event)

@@ -21,9 +21,7 @@ public class ModSpells
     public static boolean checkSpells(List<notes> notesToCheck, List<AbstractSymbol> stack, Player player, Level level) //this function checks if you used a spell
     {
         for (Spell spell: SPELLS) {
-            if (spell.checkSpell(notesToCheck, stack, player, level)) {
-                return true;
-            }
+            if (spell.checkSpell(notesToCheck, stack, player, level)) return true;
         }
         return false;
     }

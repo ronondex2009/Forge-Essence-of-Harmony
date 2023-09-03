@@ -22,6 +22,7 @@ public class SelfOperator extends Spell {
     
     public SelfOperator()
     {
+        super();
         spellNotes.add(notes.C);
         spellNotes.add(notes.E);
         spellNotes.add(notes.G);

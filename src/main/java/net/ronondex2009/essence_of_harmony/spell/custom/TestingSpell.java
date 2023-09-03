@@ -2,6 +2,7 @@ package net.ronondex2009.essence_of_harmony.spell.custom;
 
 import java.util.List;
 
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.ronondex2009.essence_of_harmony.sound.ModSounds;
@@ -14,6 +15,7 @@ public class TestingSpell extends Spell {
    
     public TestingSpell() 
     {
+        super();
         spellNotes.add(notes.C);
         spellNotes.add(notes.D);
         spellNotes.add(notes.E);
@@ -22,8 +24,9 @@ public class TestingSpell extends Spell {
 
     public boolean runSpell(List<AbstractSymbol> stack, Player player, Level level)
     {
-        player.playSound(ModSounds.CAST_SPELL.get());
+        if(!level.isClientSide) player.sendSystemMessage(Component.literal("DEBUGGING!!!!"));
         stack.add(new IntSymbol(1));
+        player.playSound(ModSounds.CAST_SPELL.get());
         return true;
     }
 

@@ -17,9 +17,9 @@ public class ClearStackSpell extends Spell
         player.playSound(ModSounds.CAST_SPELL.get());
         return true;
     }
-
     public ClearStackSpell()
     {
+        super();
         spellNotes.add(notes.G);
         spellNotes.add(notes.E);
         spellNotes.add(notes.D);
