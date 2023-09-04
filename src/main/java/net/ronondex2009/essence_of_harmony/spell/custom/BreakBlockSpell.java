@@ -3,7 +3,6 @@ package net.ronondex2009.essence_of_harmony.spell.custom;
 import java.util.List;
 
 import net.minecraft.core.BlockPos;
-import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.ronondex2009.essence_of_harmony.item.ModItems;
@@ -17,14 +16,13 @@ public class BreakBlockSpell extends Spell {
     
     @Override
     public boolean runSpell(List<AbstractSymbol> stack, Player player, Level level) 
-    {
-        if(stack.size()<1) return false;
+    {        
+        if(stack.size()==0) return false;
         if(!(stack.get(stack.size()-1).getSymbolType().equals("Vector"))) return false;
         
         VectorSymbol location = (VectorSymbol) stack.get(stack.size()-1);
         level.destroyBlock(new BlockPos(location.getX(), location.getY(), location.getZ()), true);
         stack.remove(stack.size()-1);
-        player.sendSystemMessage(Component.literal("heyaayayaa"));
 
         player.playSound(ModSounds.CAST_SPELL.get());
         return true;

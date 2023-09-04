@@ -57,7 +57,6 @@ public class CheckSpellC2SPacket
     {
         ctx.get().enqueueWork(() -> {
             ModSpells.checkSpells(msg.noteList, msg.stack, ctx.get().getSender(), ctx.get().getSender().getLevel());
-            ctx.get().getSender().sendSystemMessage(Component.literal("heyyyyy"));
         });
     }
 

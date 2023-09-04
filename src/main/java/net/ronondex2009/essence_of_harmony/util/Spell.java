@@ -20,8 +20,8 @@ public class Spell
     {
         if(!isEnabled) return false;
         boolean isValid = false;
-        //for(Item item : allowedInstruments)
-            //if(item.equals(player.getMainHandItem().getItem()))
+        for(Item item : allowedInstruments)
+            if(item.equals(player.getMainHandItem().getItem()))
                 isValid = true;
         if(spellNotes.equals(notesToCheck)&&isValid) return runSpell(stack, player, level);
         else return false;

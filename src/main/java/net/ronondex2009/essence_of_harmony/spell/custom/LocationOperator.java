@@ -31,10 +31,10 @@ public class LocationOperator extends Spell {
     
     public LocationOperator()
     {
+        spellNotes.add(notes.B);
         spellNotes.add(notes.E);
         spellNotes.add(notes.G);
-        spellNotes.add(notes.B);
-        spellNotes.add(notes.G);
+        spellNotes.add(notes.E);
         allowedInputs.add("Entity");
         allowedInstruments.add(ModItems.FLUTE.get());
         allowedInstruments.add(ModItems.OCARINA.get());

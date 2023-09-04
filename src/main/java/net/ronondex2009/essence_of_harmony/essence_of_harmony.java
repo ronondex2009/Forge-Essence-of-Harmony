@@ -17,6 +17,7 @@ import net.ronondex2009.essence_of_harmony.block.ModBlocks;
 import net.ronondex2009.essence_of_harmony.item.ModItems;
 import net.ronondex2009.essence_of_harmony.networking.ModPacketID;
 import net.ronondex2009.essence_of_harmony.sound.ModSounds;
+import net.ronondex2009.essence_of_harmony.spell.ModSpells;
 import net.ronondex2009.essence_of_harmony.world.features.ModConfiguredFeatures;
 import net.ronondex2009.essence_of_harmony.world.features.ModPlacedFeatures;
 
@@ -47,6 +48,7 @@ public class essence_of_harmony {
         LOGGER.info("HELLO HOW ARE YOU?");
         event.enqueueWork(() -> {
             ModPacketID.register();
+            ModSpells.register();
         });
     }
 
