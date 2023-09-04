@@ -43,9 +43,6 @@ authors="ronondex2009" #optional
 # The description text for the mod (multi line!) (#mandatory)
 description='''
 WIP
-This mod is based around magic.. but takes a completely new turn!
-Use music to create spells and STRIP THE ESSENCE FROM THE PLANET or have fun!
-BETA! THIS MOD IS NOT COMPLETE!f
 '''
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
 [[dependencies.essence_of_harmony]] #optional

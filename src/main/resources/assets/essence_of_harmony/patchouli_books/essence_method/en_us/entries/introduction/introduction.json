@@ -1,0 +1,18 @@
+{
+    "name": "Introduction",
+    "icon": "minecraft:writable_book",
+    "category": "essence_of_harmony:introduction_category",
+    "pages": [
+        "There appears to be a magical force that permutates every physical thing, and seems to be infinite. Unfortunately, I have not been successful with manipulating it or measuring it.$(br2)Some objects, like rocks or some plants, seem to be capable of interacting with this field in the world.",
+        "I have encountered some strange rocks underground that glow and vibrate. They seem to become temporarily indestructible when hit with a pickaxe, but eventually give up their magical protections after enough hits. ",
+        {
+            "type": "patchouli:image",
+            "images" : [
+                "essence_of_harmony:textures/gui/notium_cave.png"
+            ],
+            "title": "Notium Cave",
+            "border": true,
+            "text": "Notium typically generates between y: 0 and y: 40"
+        }
+    ]
+}
