@@ -3,7 +3,7 @@
     "icon": "essence_of_harmony:flute",
     "category": "essence_of_harmony:spells_category",
     "pages": [
-        "Every player has an invisible container (called a stack) within their sentience that holds values, or \"symbols.\" There are several different types of symbols listed $(I:essence_of_harmony:symbols)here.$(/I)",
+        "Every player has an invisible container (called a stack) within their sentience that holds values, or \"symbols.\" There are several different types of symbols listed $(l:essence_of_harmony:spells/symbols)here.$(/l)",
         "When a player plays a sequence of notes associated with a motif, that motif will execute ONLY IF:$(li) The correct symbols are aon the top of the stack, $(li) the instrument is capable of casting that motif, and $(li) the motif's own checks are valid.",
         "Motifs are divided into three categories: $(li) Spells, which can take in symbols and interacts with the world, $(li) Operators, which only interact with the stack and it's symbols, or $(li) Miscellaneous, which don't typically interact with the stack."
     ]

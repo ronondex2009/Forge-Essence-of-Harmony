@@ -1,5 +1,6 @@
 {
     "name": "Spells",
     "description": "I have figured out how to interact with this field! With the power of.. music?",
-    "icon": "essence_of_harmony:flute"
+    "icon": "essence_of_harmony:flute",
+    "advancement": "essence_of_harmony:instrument"
 }

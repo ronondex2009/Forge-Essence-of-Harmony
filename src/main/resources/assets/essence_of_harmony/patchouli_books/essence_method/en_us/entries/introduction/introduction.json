@@ -13,6 +13,11 @@
             "title": "Notium Cave",
             "border": true,
             "text": "Notium typically generates between y: 0 and y: 40"
+        },
+        {
+            "type": "patchouli:crafting",
+            "recipe": "essence_of_harmony:flute",
+            "recipe2": "essence_of_harmony:ocarina"
         }
     ]
 }
