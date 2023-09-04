@@ -24,19 +24,7 @@ import net.ronondex2009.essence_of_harmony.util.notes;
 
 public class ClientEvents {
     
-    public static boolean is_down_C = false;
-    public static boolean is_down_CS = false;
-    public static boolean is_down_D = false;
-    public static boolean is_down_DS = false;
-    public static boolean is_down_E = false;
-    public static boolean is_down_F = false;
-    public static boolean is_down_FS = false;
-    public static boolean is_down_G = false;
-    public static boolean is_down_GS = false;
-    public static boolean is_down_A = false;
-    public static boolean is_down_AS = false;
-    public static boolean is_down_B = false;
-
+    public static boolean[] is_down = new boolean[12]; 
     
     @Mod.EventBusSubscriber(modid = essence_of_harmony.mod_id, value = Dist.CLIENT)
     public static class ClientForgeEvents 
@@ -45,35 +33,35 @@ public class ClientEvents {
         public static void onKeyInput(InputEvent.Key key)
         {
             Minecraft instance = Minecraft.getInstance();
-            if(ModKeyMappings.PLAYING_KEY_C.consumeClick() && !is_down_C) { playNote(notes.C, instance); is_down_C=true; }
-            //if(ModKeyMappings.PLAYING_KEY_C_SHARP.consumeClick() && !is_down_CS) { playNote(notes.CS, instance); is_down_CS=true; }
-            if(ModKeyMappings.PLAYING_KEY_D.consumeClick() && !is_down_D) { playNote(notes.D, instance); is_down_D=true; }
-            //if(ModKeyMappings.PLAYING_KEY_D_SHARP.consumeClick() && !is_down_DS) { playNote(notes.DS, instance); is_down_DS=true; }
-            if(ModKeyMappings.PLAYING_KEY_E.consumeClick() && !is_down_E) { playNote(notes.E, instance); is_down_E=true; }
-            if(ModKeyMappings.PLAYING_KEY_F.consumeClick() && !is_down_F) { playNote(notes.F, instance); is_down_F=true; }
-            //if(ModKeyMappings.PLAYING_KEY_F_SHARP.consumeClick() && !is_down_FS) { playNote(notes.FS, instance); is_down_FS=true; }
-            if(ModKeyMappings.PLAYING_KEY_G.consumeClick() && !is_down_G) { playNote(notes.G, instance); is_down_G=true; }
-            //if(ModKeyMappings.PLAYING_KEY_G_SHARP.consumeClick() && !is_down_GS) { playNote(notes.GS, instance); is_down_GS=true; }
-            if(ModKeyMappings.PLAYING_KEY_A.consumeClick() && !is_down_A) { playNote(notes.A, instance); is_down_A=true; }
-            //if(ModKeyMappings.PLAYING_KEY_A_SHARP.consumeClick() && !is_down_AS) { playNote(notes.AS, instance); is_down_AS=true; }
-            if(ModKeyMappings.PLAYING_KEY_B.consumeClick() && !is_down_B) { playNote(notes.B, instance); is_down_B=true; }
+            if(ModKeyMappings.PLAYING_KEY_C.consumeClick() && !is_down[0]) { playNote(notes.C, instance); is_down[0]=true; }
+            //if(ModKeyMappings.PLAYING_KEY_C_SHARP.consumeClick() && !is_down[1]) { playNote(notes.CS, instance); is_down[1]=true; }
+            if(ModKeyMappings.PLAYING_KEY_D.consumeClick() && !is_down[2]) { playNote(notes.D, instance); is_down[2]=true; }
+            //if(ModKeyMappings.PLAYING_KEY_D_SHARP.consumeClick() && !is_down[3]) { playNote(notes.DS, instance); is_down[3]=true; }
+            if(ModKeyMappings.PLAYING_KEY_E.consumeClick() && !is_down[4]) { playNote(notes.E, instance); is_down[4]=true; }
+            if(ModKeyMappings.PLAYING_KEY_F.consumeClick() && !is_down[5]) { playNote(notes.F, instance); is_down[5]=true; }
+            //if(ModKeyMappings.PLAYING_KEY_F_SHARP.consumeClick() && !is_down[6]) { playNote(notes.FS, instance); is_down[6]=true; }
+            if(ModKeyMappings.PLAYING_KEY_G.consumeClick() && !is_down[7]) { playNote(notes.G, instance); is_down[7]=true; }
+            //if(ModKeyMappings.PLAYING_KEY_G_SHARP.consumeClick() && !is_down[8]) { playNote(notes.GS, instance); is_down[8]=true; }
+            if(ModKeyMappings.PLAYING_KEY_A.consumeClick() && !is_down[9]) { playNote(notes.A, instance); is_down[9]=true; }
+            //if(ModKeyMappings.PLAYING_KEY_A_SHARP.consumeClick() && !is_down[10]) { playNote(notes.AS, instance); is_down[10]=true; }
+            if(ModKeyMappings.PLAYING_KEY_B.consumeClick() && !is_down[11]) { playNote(notes.B, instance); is_down[11]=true; }
         }
-            @SubscribeEvent
+        @SubscribeEvent
         public static void tickEvent(ClientTickEvent event)
         {
             Minecraft instance = Minecraft.getInstance();
-            if(!ModKeyMappings.PLAYING_KEY_C.isDown() && is_down_C) { stopNote(notes.C, instance); is_down_C=false; } 
-            if(!ModKeyMappings.PLAYING_KEY_C_SHARP.isDown() && is_down_CS) { stopNote(notes.CS, instance); is_down_CS=false; } 
-            if(!ModKeyMappings.PLAYING_KEY_D.isDown() && is_down_D) { stopNote(notes.D, instance); is_down_D=false; } 
-            if(!ModKeyMappings.PLAYING_KEY_D_SHARP.isDown() && is_down_DS) { stopNote(notes.DS, instance); is_down_DS=false; } 
-            if(!ModKeyMappings.PLAYING_KEY_E.isDown() && is_down_E) { stopNote(notes.E, instance); is_down_E=false; } 
-            if(!ModKeyMappings.PLAYING_KEY_F.isDown() && is_down_F) { stopNote(notes.F, instance); is_down_F=false; } 
-            if(!ModKeyMappings.PLAYING_KEY_F_SHARP.isDown() && is_down_FS) { stopNote(notes.FS, instance); is_down_FS=false; } 
-            if(!ModKeyMappings.PLAYING_KEY_G.isDown() && is_down_G) { stopNote(notes.G, instance); is_down_G=false; } 
-            if(!ModKeyMappings.PLAYING_KEY_G_SHARP.isDown() && is_down_GS) { stopNote(notes.GS, instance); is_down_GS=false; } 
-            if(!ModKeyMappings.PLAYING_KEY_A.isDown() && is_down_A) { stopNote(notes.A, instance); is_down_A=false; } 
-            if(!ModKeyMappings.PLAYING_KEY_A_SHARP.isDown() && is_down_AS) { stopNote(notes.AS, instance); is_down_AS=false; } 
-            if(!ModKeyMappings.PLAYING_KEY_B.isDown() && is_down_B) { stopNote(notes.B, instance); is_down_B=false; } 
+            if(!ModKeyMappings.PLAYING_KEY_C.isDown() && is_down[0]) { stopNote(notes.C, instance); is_down[0]=false; } 
+            if(!ModKeyMappings.PLAYING_KEY_C_SHARP.isDown() && is_down[1]) { stopNote(notes.CS, instance); is_down[1]=false; } 
+            if(!ModKeyMappings.PLAYING_KEY_D.isDown() && is_down[2]) { stopNote(notes.D, instance); is_down[2]=false; } 
+            if(!ModKeyMappings.PLAYING_KEY_D_SHARP.isDown() && is_down[3]) { stopNote(notes.DS, instance); is_down[3]=false; } 
+            if(!ModKeyMappings.PLAYING_KEY_E.isDown() && is_down[4]) { stopNote(notes.E, instance); is_down[4]=false; } 
+            if(!ModKeyMappings.PLAYING_KEY_F.isDown() && is_down[5]) { stopNote(notes.F, instance); is_down[5]=false; } 
+            if(!ModKeyMappings.PLAYING_KEY_F_SHARP.isDown() && is_down[6]) { stopNote(notes.FS, instance); is_down[6]=false; } 
+            if(!ModKeyMappings.PLAYING_KEY_G.isDown() && is_down[7]) { stopNote(notes.G, instance); is_down[7]=false; } 
+            if(!ModKeyMappings.PLAYING_KEY_G_SHARP.isDown() && is_down[8]) { stopNote(notes.GS, instance); is_down[8]=false; } 
+            if(!ModKeyMappings.PLAYING_KEY_A.isDown() && is_down[9]) { stopNote(notes.A, instance); is_down[9]=false; } 
+            if(!ModKeyMappings.PLAYING_KEY_A_SHARP.isDown() && is_down[10]) { stopNote(notes.AS, instance); is_down[10]=false; } 
+            if(!ModKeyMappings.PLAYING_KEY_B.isDown() && is_down[11]) { stopNote(notes.B, instance); is_down[11]=false; } 
         }
     }
 
