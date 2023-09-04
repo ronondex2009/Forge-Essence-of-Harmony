@@ -1,0 +1,9 @@
+{
+    "name": "Spells 101",
+    "icon": "minecraft:paper",
+    "category": "essence_of_harmony:spells_category",
+    "pages": [
+        "Playing instruments with notium built into them seems to yield very intersting abilities.. First of all, they are capable of turning simple notes and patterns into world-altering movements of essence. Second of all, they sound pretty cool.",
+        "Notes can be played while holding an instrument by pressing the Z,X,C,V,B,N, or M keys. Rebinding will be, unfortunately, necessary."
+    ]
+}

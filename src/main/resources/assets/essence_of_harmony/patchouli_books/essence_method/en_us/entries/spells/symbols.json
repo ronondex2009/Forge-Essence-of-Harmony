@@ -1,0 +1,9 @@
+{
+    "name": "symbols",
+    "icon": "minecraft:book",
+    "category": "essence_of_harmony:spells_category",
+    "pages": [
+        "Symbols contain data that motifs use. They are always contained on a one-dimentional list called a stack. This stack is usually thought of as a literal stack holding these symbols, where motifs interact (usually) with the top of.",
+        "Types of symbols: $(li) Number: contains a single number. $(li) Vector: contains three numbers that represent a location, direction, or velocity. $(li) Entity: represents any 'entity' such as a floating item, a player, mob, or minecart $(li) Trash: this symbol will only appear due to a bug."
+    ]
+}
