@@ -16,6 +16,7 @@ import net.minecraftforge.network.NetworkEvent;
 import net.ronondex2009.essence_of_harmony.spell.ModSpells;
 import net.ronondex2009.essence_of_harmony.spell.symbols.TrashSymbol;
 import net.ronondex2009.essence_of_harmony.util.AbstractSymbol;
+import net.ronondex2009.essence_of_harmony.util.Serialization;
 import net.ronondex2009.essence_of_harmony.util.notes;
 
 public class CheckSpellC2SPacket 
@@ -35,8 +36,8 @@ public class CheckSpellC2SPacket
      */
     public static void encode(CheckSpellC2SPacket msg, FriendlyByteBuf buf)
     {
-        byte[] stackBytes = convertObjectToBytes(msg.stack);
-        byte[] noteBytes = convertObjectToBytes(msg.noteList);
+        byte[] stackBytes = Serialization.convertObjectToBytes(msg.stack);
+        byte[] noteBytes = Serialization.convertObjectToBytes(msg.noteList);
 
         buf.writeByteArray(stackBytes).writeByteArray(noteBytes);
     }
@@ -46,8 +47,8 @@ public class CheckSpellC2SPacket
         byte[] stackBytes = buf.readByteArray(); //read from packet
         byte[] noteBytes = buf.readByteArray(); //read from packet
         
-        List<notes> noteList = convertBytesToObject(noteBytes);
-        List<AbstractSymbol> stackList = convertBytesToObject(stackBytes);
+        List<notes> noteList = Serialization.convertBytesToObject(noteBytes);
+        List<AbstractSymbol> stackList = Serialization.convertBytesToObject(stackBytes);
 
         return new CheckSpellC2SPacket(stackList, noteList);
 
@@ -58,21 +59,5 @@ public class CheckSpellC2SPacket
         ctx.get().enqueueWork(() -> {
             ModSpells.checkSpells(msg.noteList, msg.stack, ctx.get().getSender(), ctx.get().getSender().getLevel());
         });
-    }
-
-    public static byte[] convertObjectToBytes(Object obj) {
-        ByteArrayOutputStream boas = new ByteArrayOutputStream();
-        try (ObjectOutputStream ois = new ObjectOutputStream(boas)) {
-            ois.writeObject(obj);
-            return boas.toByteArray();
-        } catch (IOException e) { return null; }
-    }
-
-    @SuppressWarnings("unchecked")
-    public static <T extends Object> T convertBytesToObject(byte[] bytes) {
-        InputStream is = new ByteArrayInputStream(bytes);
-        try (ObjectInputStream ois = new ObjectInputStream(is)) {
-            return (T) ois.readObject();
-        } catch (IOException e) { return null; } catch (ClassNotFoundException e) { return null; }
     }
 }
