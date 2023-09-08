@@ -1,20 +1,11 @@
 package net.ronondex2009.essence_of_harmony.networking.packets;
 
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Supplier;
 
 import net.minecraft.network.FriendlyByteBuf;
-import net.minecraft.network.chat.Component;
 import net.minecraftforge.network.NetworkEvent;
 import net.ronondex2009.essence_of_harmony.spell.ModSpells;
-import net.ronondex2009.essence_of_harmony.spell.symbols.TrashSymbol;
 import net.ronondex2009.essence_of_harmony.util.AbstractSymbol;
 import net.ronondex2009.essence_of_harmony.util.Serialization;
 import net.ronondex2009.essence_of_harmony.util.notes;

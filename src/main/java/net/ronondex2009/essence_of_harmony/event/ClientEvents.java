@@ -88,6 +88,7 @@ public class ClientEvents {
     public static List<notes> notesPlayed = new ArrayList<>();
     public static List<AbstractSymbol> stack = new ArrayList<>();
 
+    @SuppressWarnings("null") //handled
     private static void playNote(notes note, Minecraft instance)
     {
         if(instance.player==null) return;
@@ -97,7 +98,7 @@ public class ClientEvents {
         notesPlayed.add(note);
     }
 
-
+    @SuppressWarnings("null") //handled
     private static void stopNote(notes note, Minecraft instance)
     {
         if(instance.player==null) return;

@@ -38,13 +38,15 @@ public class PlayNoteC2CPacket {
     {
         return new PlayNoteC2CPacket(buf.readEnum(notes.class), buf.readUUID());
     }
-
+    
+    @SuppressWarnings("null") // this is handled
     public static void handle(PlayNoteC2CPacket msg, Supplier<NetworkEvent.Context> context)
     {
         context.get().enqueueWork(() -> {
             Minecraft instance = Minecraft.getInstance();
             SoundEvent soundToUse = null;
-            ItemStack item = instance.level.getPlayerByUUID(msg.sender).getMainHandItem();
+            if(instance.level.getPlayerByUUID(msg.sender) == null) return; //handled here
+            ItemStack item = instance.level.getPlayerByUUID(msg.sender).getMainHandItem(); 
             if(item.getItem()==ModItems.FLUTE.get()) soundToUse = ModSounds.FLUTE.get();
             if(item.getItem()==ModItems.OCARINA.get()) soundToUse = ModSounds.OCARINA.get();
             if(item.getItem()==ModItems.GUITAR.get()) soundToUse = ModSounds.GUITAR.get();

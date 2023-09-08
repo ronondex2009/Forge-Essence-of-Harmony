@@ -16,6 +16,7 @@ import net.ronondex2009.essence_of_harmony.util.notes;
 public class LocationOperator extends Spell {
 
     @Override
+    @SuppressWarnings("null") //if the entity dissapears mid-tick like that, you might as well crash
     public boolean runSpell(List<AbstractSymbol> stack, Player player, Level level) 
     {
         if(stack.size()==0) return false;

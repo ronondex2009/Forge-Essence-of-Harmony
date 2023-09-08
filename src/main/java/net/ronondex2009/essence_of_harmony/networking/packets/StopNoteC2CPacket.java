@@ -3,7 +3,6 @@ package net.ronondex2009.essence_of_harmony.networking.packets;
 import java.util.*;
 import java.util.function.Supplier;
 
-import net.minecraft.client.Minecraft;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraftforge.network.NetworkEvent;
 import net.ronondex2009.essence_of_harmony.util.notes;
@@ -39,7 +38,6 @@ public class StopNoteC2CPacket {
     public static void handle(StopNoteC2CPacket msg, Supplier<NetworkEvent.Context> context) 
     {
         context.get().enqueueWork(() -> {
-            Minecraft instance = Minecraft.getInstance();
             for(updateCurrentlyPlayingNotes toUpdate : StopNoteC2CPacket.listeners)
                 toUpdate.updateNotes(msg.uuid, msg.note);
             for(updateCurrentlyPlayingNotes toUpdate : StopNoteC2CPacket.listeners)

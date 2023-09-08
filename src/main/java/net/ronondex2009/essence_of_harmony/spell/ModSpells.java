@@ -3,7 +3,6 @@ package net.ronondex2009.essence_of_harmony.spell;
 import java.util.HashMap;
 import java.util.List;
 
-import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.Level;

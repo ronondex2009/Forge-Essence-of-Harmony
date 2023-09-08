@@ -7,7 +7,6 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.Blocks;
 import net.ronondex2009.essence_of_harmony.block.ModBlocks;
 import net.ronondex2009.essence_of_harmony.item.ModItems;
 import net.ronondex2009.essence_of_harmony.sound.ModSounds;
@@ -26,7 +25,7 @@ public class BreakBlockSpell extends Spell
         
         VectorSymbol location = (VectorSymbol) stack.get(stack.size()-1);
         stack.remove(stack.size()-1);
-        if(level.getBlockState(new BlockPos(location.getX(), location.getY(), location.getZ())).getBlock().defaultDestroyTime() > power/1.5 && (power==3 && level.getBlockState(new BlockPos(location.getX(), location.getY(), location.getZ())).getBlock()==ModBlocks.NOTIUM_ORE.get()))
+        if(level.getBlockState(new BlockPos(location.getX(), location.getY(), location.getZ())).getBlock().defaultDestroyTime() > power/1.5 && !(power>=3 && level.getBlockState(new BlockPos(location.getX(), location.getY(), location.getZ())).getBlock()==ModBlocks.NOTIUM_ORE.get()))
         {
             if(level.isClientSide)
                 player.sendSystemMessage(Component.literal("The spell wasn't powerful enough to destroy the block!").withStyle(ChatFormatting.RED));
@@ -52,7 +51,7 @@ public class BreakBlockSpell extends Spell
         allowedInstruments.add(ModItems.OCARINA.get());
         allowedInstruments.add(ModItems.GUITAR.get());
         allowedInstruments.add(ModItems.OVERDRIVE_GUITAR.get());
-        baseEssenceUsage = 0.1f;
+        baseEssenceUsage = 10f;
     }
 
 }

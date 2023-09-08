@@ -8,6 +8,7 @@ import net.ronondex2009.essence_of_harmony.essence_of_harmony;
 import net.ronondex2009.essence_of_harmony.networking.packets.CheckSpellC2SPacket;
 import net.ronondex2009.essence_of_harmony.networking.packets.PlayNoteC2CPacket;
 import net.ronondex2009.essence_of_harmony.networking.packets.StopNoteC2CPacket;
+import net.ronondex2009.essence_of_harmony.networking.packets.UpdateEssenceMapS2CPacket;
 
 public class ModPacketID {
     private static int id = 0;
@@ -19,5 +20,6 @@ public class ModPacketID {
         INSTANCE.messageBuilder(CheckSpellC2SPacket.class, id++, NetworkDirection.PLAY_TO_SERVER).encoder(CheckSpellC2SPacket::encode).decoder(CheckSpellC2SPacket::decode).consumerMainThread(CheckSpellC2SPacket::handle).add();
         INSTANCE.messageBuilder(PlayNoteC2CPacket.class, id++, NetworkDirection.PLAY_TO_CLIENT).encoder(PlayNoteC2CPacket::encode).decoder(PlayNoteC2CPacket::decode).consumerMainThread(PlayNoteC2CPacket::handle).add();
         INSTANCE.messageBuilder(StopNoteC2CPacket.class, id++, NetworkDirection.PLAY_TO_CLIENT).encoder(StopNoteC2CPacket::encode).decoder(StopNoteC2CPacket::decode).consumerMainThread(StopNoteC2CPacket::handle).add();
+        INSTANCE.messageBuilder(UpdateEssenceMapS2CPacket.class, id++, NetworkDirection.PLAY_TO_CLIENT).encoder(UpdateEssenceMapS2CPacket::encode).decoder(UpdateEssenceMapS2CPacket::decode).consumerMainThread(UpdateEssenceMapS2CPacket::handle).add();
     }
 }

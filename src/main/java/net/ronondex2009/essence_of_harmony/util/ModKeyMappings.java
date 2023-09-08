@@ -14,7 +14,7 @@ import net.ronondex2009.essence_of_harmony.essence_of_harmony;
 @Mod.EventBusSubscriber(modid = essence_of_harmony.mod_id, value = Dist.CLIENT, bus = Bus.MOD)
 public class ModKeyMappings {
 
-    public static final String KEY_CATEGORY_EOH = "key.category.essence_of_harmony.piano";
+    public static final String KEY_CATEGORY_EOH = "key.category.essence_of_harmony.pianoKeys";
     
     public static final KeyMapping PLAYING_KEY_F_SHARP = new KeyMapping("key.essence_of_harmony.f#", KeyConflictContext.IN_GAME, InputConstants.Type.KEYSYM, GLFW.GLFW_KEY_G, KEY_CATEGORY_EOH);
     public static final KeyMapping PLAYING_KEY_G = new KeyMapping("key.essence_of_harmony.g", KeyConflictContext.IN_GAME, InputConstants.Type.KEYSYM, GLFW.GLFW_KEY_B, KEY_CATEGORY_EOH);
@@ -27,7 +27,6 @@ public class ModKeyMappings {
     public static final KeyMapping PLAYING_KEY_D = new KeyMapping("key.essence_of_harmony.d", KeyConflictContext.IN_GAME, InputConstants.Type.KEYSYM, GLFW.GLFW_KEY_X, KEY_CATEGORY_EOH);
     public static final KeyMapping PLAYING_KEY_D_SHARP = new KeyMapping("key.essence_of_harmony.d#", KeyConflictContext.IN_GAME, InputConstants.Type.KEYSYM, GLFW.GLFW_KEY_D, KEY_CATEGORY_EOH);
     public static final KeyMapping PLAYING_KEY_E = new KeyMapping("key.essence_of_harmony.e", KeyConflictContext.IN_GAME, InputConstants.Type.KEYSYM, GLFW.GLFW_KEY_C, KEY_CATEGORY_EOH);
-    public static final KeyMapping PLAYING_KEY_F = new KeyMapping("key.essence_of_harmony.f", KeyConflictContext.IN_GAME, InputConstants.Type.KEYSYM, GLFW.GLFW_KEY_V, KEY_CATEGORY_EOH);
-
+    public static final KeyMapping PLAYING_KEY_F = new KeyMapping("key.essence_of_harmony.f", KeyConflictContext.IN_GAME, InputConstants.Type.KEYSYM, GLFW.GLFW_KEY_V , KEY_CATEGORY_EOH);
 
 }

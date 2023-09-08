@@ -11,7 +11,7 @@ public class essenceMap
     public static final String KEY = "essenceMap";
     public static final ConcurrentHashMap<ChunkPos, Float> essenceConcurrentMap = new ConcurrentHashMap<>(); 
     public static Float getEssence(ChunkPos pos) {return essenceConcurrentMap.get(pos);}
-    public static void setEssence(ChunkPos pos, Float value) {essenceConcurrentMap.put(pos, value);}
+    public static void setEssence(ChunkPos pos, Float value) {essenceConcurrentMap.replace(pos, value);}
 
     public static void readData(ChunkAccess chunk, CompoundTag data)
     {
@@ -33,7 +33,6 @@ public class essenceMap
     
     public static void saveData(ChunkAccess chunk, CompoundTag data)
     {
-        CompoundTag tag = new CompoundTag();
         if(essenceConcurrentMap.get(chunk.getPos()) == null) makeEmptyChunk(chunk.getPos());
         data.putFloat(KEY, essenceConcurrentMap.get(chunk.getPos()));
     }

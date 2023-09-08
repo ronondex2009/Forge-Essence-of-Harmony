@@ -27,9 +27,10 @@ public class SoundInstrumentEvent extends AbstractTickableSoundInstance implemen
     }
 
     @Override
+    @SuppressWarnings("null") //handled
     public void tick() 
     {
-        if(level.getPlayerByUUID(player)==null) { this.stop(); this.toStop=true; return; } //prevent sounds from being kept on the server if player leaves.
+        if(level.getPlayerByUUID(player)==null) { this.stop(); this.toStop=true; return; } //crude fail-safe
         this.x = level.getPlayerByUUID(player).getEyePosition().x;
         this.y = level.getPlayerByUUID(player).getEyePosition().y;
         this.z = level.getPlayerByUUID(player).getEyePosition().z;
