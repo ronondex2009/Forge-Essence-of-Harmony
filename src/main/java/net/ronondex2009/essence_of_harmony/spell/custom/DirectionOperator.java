@@ -39,7 +39,6 @@ public class DirectionOperator extends Spell {
         spellNotes.add(notes.F);
         spellNotes.add(notes.A);
         spellNotes.add(notes.F);
-        allowedInputs.add("Entity");
         allowedInstruments.add(ModItems.FLUTE.get());
         allowedInstruments.add(ModItems.OCARINA.get());
         allowedInstruments.add(ModItems.GUITAR.get());

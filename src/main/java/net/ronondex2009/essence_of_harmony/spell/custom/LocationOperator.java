@@ -35,7 +35,6 @@ public class LocationOperator extends Spell {
         spellNotes.add(notes.E);
         spellNotes.add(notes.G);
         spellNotes.add(notes.E);
-        allowedInputs.add("Entity");
         allowedInstruments.add(ModItems.FLUTE.get());
         allowedInstruments.add(ModItems.OCARINA.get());
         allowedInstruments.add(ModItems.GUITAR.get());

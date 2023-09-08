@@ -9,35 +9,33 @@ import net.minecraft.world.level.chunk.ChunkAccess;
 public class essenceMap
 {
     public static final String KEY = "essenceMap";
-    public static final ConcurrentHashMap<ChunkPos, Integer> essenceConcurrentMap = new ConcurrentHashMap<>(); 
-    public static Integer getEssence(ChunkPos pos) {return essenceConcurrentMap.get(pos);}
-    public static void setEssence(ChunkPos pos, Integer value) {essenceConcurrentMap.put(pos, value);}
+    public static final ConcurrentHashMap<ChunkPos, Float> essenceConcurrentMap = new ConcurrentHashMap<>(); 
+    public static Float getEssence(ChunkPos pos) {return essenceConcurrentMap.get(pos);}
+    public static void setEssence(ChunkPos pos, Float value) {essenceConcurrentMap.put(pos, value);}
 
     public static void readData(ChunkAccess chunk, CompoundTag data)
     {
         if(data.contains(KEY))
-            essenceConcurrentMap.put(chunk.getPos(), data.getInt(KEY));
+            essenceConcurrentMap.put(chunk.getPos(), data.getFloat(KEY));
         else
-            essenceConcurrentMap.put(chunk.getPos(), 40);
-        System.out.println("LOADED");
+            essenceConcurrentMap.put(chunk.getPos(), 100f);
     }
 
     public static void makeEmptyChunk(ChunkPos chunk)
     {
-        essenceConcurrentMap.putIfAbsent(chunk, 100);
+        essenceConcurrentMap.putIfAbsent(chunk, 100f);
     }
 
     public static void unloadData(ChunkAccess chunk)
     {
         essenceConcurrentMap.remove(chunk.getPos());
-        System.out.println("UNLOADED");
     }
     
     public static void saveData(ChunkAccess chunk, CompoundTag data)
     {
         CompoundTag tag = new CompoundTag();
-        System.out.println("SAVED");
-        data.putInt(KEY, essenceConcurrentMap.get(chunk.getPos()));
+        if(essenceConcurrentMap.get(chunk.getPos()) == null) makeEmptyChunk(chunk.getPos());
+        data.putFloat(KEY, essenceConcurrentMap.get(chunk.getPos()));
     }
 }
 

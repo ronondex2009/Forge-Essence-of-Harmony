@@ -49,8 +49,6 @@ public class RaycastBlockOperator extends Spell {
         spellNotes.add(notes.D);
         spellNotes.add(notes.G);
         spellNotes.add(notes.D);
-        allowedInputs.add("Vector");
-        allowedInputs.add("Vector");
         allowedInstruments.add(ModItems.FLUTE.get());
         allowedInstruments.add(ModItems.OCARINA.get());
         allowedInstruments.add(ModItems.GUITAR.get());
