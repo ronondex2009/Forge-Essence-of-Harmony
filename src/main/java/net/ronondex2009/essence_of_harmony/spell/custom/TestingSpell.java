@@ -25,7 +25,7 @@ public class TestingSpell extends Spell {
         allowedInstruments.add(ModItems.OVERDRIVE_GUITAR.get());
     }
 
-    public boolean runSpell(List<AbstractSymbol> stack, Player player, Level level)
+    public boolean runSpell(List<notes> notes, List<AbstractSymbol> stack, Player player, Level level)
     {
         player.playSound(ModSounds.CAST_SPELL.get());
         stack.add(new IntSymbol(1));

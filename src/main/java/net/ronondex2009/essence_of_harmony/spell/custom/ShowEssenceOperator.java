@@ -15,7 +15,7 @@ import net.ronondex2009.essence_of_harmony.world.essenceMap;
 public class ShowEssenceOperator extends Spell {
     
     @Override
-    public boolean runSpell(List<AbstractSymbol> stack, Player player, Level level) 
+    public boolean runSpell(List<notes> notes, List<AbstractSymbol> stack, Player player, Level level) 
     {
         if(level.isClientSide)
             player.sendSystemMessage(Component.literal("Essence Measurement: " + 

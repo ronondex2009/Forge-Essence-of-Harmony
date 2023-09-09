@@ -1,0 +1,6 @@
+{
+    "name": "Motifs",
+    "description": "A list of motifs that almost all instruments should be capable of casting.",
+    "icon": "essence_of_harmony:flute",
+    "parent": "essence_of_harmony:motifs_category"
+}

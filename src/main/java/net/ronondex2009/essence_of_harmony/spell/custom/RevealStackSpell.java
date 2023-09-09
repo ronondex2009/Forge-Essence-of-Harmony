@@ -14,7 +14,7 @@ import net.ronondex2009.essence_of_harmony.util.notes;
 public class RevealStackSpell extends Spell 
 {
         @Override
-    public boolean runSpell(List<AbstractSymbol> stack, Player player, Level level) {
+    public boolean runSpell(List<notes> notes, List<AbstractSymbol> stack, Player player, Level level) {
         if(!level.isClientSide) player.sendSystemMessage(Component.literal("" + stack.toString()));
         player.playSound(ModSounds.CAST_SPELL.get());
         return true;

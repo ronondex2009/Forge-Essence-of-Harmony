@@ -13,7 +13,7 @@ import net.ronondex2009.essence_of_harmony.util.notes;
 public class ClearStackOperator extends Spell 
 {
     @Override
-    public boolean runSpell(List<AbstractSymbol> stack, Player player, Level level) {
+    public boolean runSpell(List<notes> notes, List<AbstractSymbol> stack, Player player, Level level) {
         stack.clear();
         player.playSound(ModSounds.CAST_SPELL.get());
         return true;

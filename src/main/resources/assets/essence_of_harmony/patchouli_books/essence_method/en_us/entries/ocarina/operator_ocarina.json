@@ -1,0 +1,13 @@
+{
+    "name": "Operator Motifs",
+    "icon": "essence_of_harmony:notium_damaged",
+    "category": "essence_of_harmony:ocarina_category",
+    "pages": [
+        "These are operators that can only be executed by the ocarina, now with it's ability to better control the essence.",
+        {
+            "type": "patchouli:text",
+            "title": "Essence's Motif",
+            "text": "Something that the flute cannot do, I am now able to measure the essence with the design of this new instrument. Takes in a location, and outputs the amount of essence in it from 0 to 100.$(br2)$(1)$(l)D, F, E, D $()$(1)$(br)[vector] -> [number] operator$(br)$(2)will always execute."
+        }
+    ]
+}

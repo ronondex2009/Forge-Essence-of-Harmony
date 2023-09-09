@@ -1,0 +1,13 @@
+{
+    "name": "Spell Motifs",
+    "icon": "essence_of_harmony:notium",
+    "category": "essence_of_harmony:flute_category",
+    "pages": [
+        "Spells interact with the world. Sometimes, spells may not be powerful enough to interact in major ways, $(l)especially if one has been cast recently. I wonder why?",
+        {
+            "type": "patchouli:text",
+            "title": "Break Block Motif",
+            "text": "Inputs a location and breaks a block at that location.$(br2)$(1)$(l)C, D, F, G, D, E, F, D $()$(1)$(br)[vector] -> [] Spell$(br)$(2)will always execute."
+        }
+    ]
+}

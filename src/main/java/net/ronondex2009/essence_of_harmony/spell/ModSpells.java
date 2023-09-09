@@ -1,5 +1,6 @@
 package net.ronondex2009.essence_of_harmony.spell;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
@@ -8,6 +9,8 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.Level;
 import net.ronondex2009.essence_of_harmony.spell.custom.ClearStackOperator;
 import net.ronondex2009.essence_of_harmony.spell.custom.DirectionOperator;
+import net.ronondex2009.essence_of_harmony.spell.custom.Execute;
+import net.ronondex2009.essence_of_harmony.spell.custom.LiteralNotes;
 import net.ronondex2009.essence_of_harmony.spell.custom.RevealStackSpell;
 import net.ronondex2009.essence_of_harmony.spell.custom.SelfOperator;
 import net.ronondex2009.essence_of_harmony.spell.custom.ShowEssenceOperator;
@@ -23,27 +26,25 @@ import net.ronondex2009.essence_of_harmony.world.essenceMap;
 
 public class ModSpells 
 {
-    public static final Spell TESTING_SPELL = new TestingSpell();
-    public static final Spell CLEAR_STACK_OPERATOR = new ClearStackOperator();
-    public static final Spell REVEAL_STACK_SPELL = new RevealStackSpell();
-    public static final Spell SELF_OPERATOR = new SelfOperator();
-    public static final Spell LOC_OPERATOR = new LocationOperator();
-    public static final Spell DIR_OPERATOR = new DirectionOperator();
-    public static final Spell RAYBLOCK_OPERATOR = new RaycastBlockOperator();
-    public static final Spell BREAK_BLOCK_SPELL = new BreakBlockSpell();
-    public static final Spell SHOW_ESSENCE_OPERATOR = new ShowEssenceOperator();
+    public static final List<Spell> spells = new ArrayList<Spell>();
+    public static final Spell TESTING_SPELL = registerSpell(new TestingSpell());
+    public static final Spell CLEAR_STACK_OPERATOR = registerSpell(new ClearStackOperator());
+    public static final Spell REVEAL_STACK_SPELL = registerSpell(new RevealStackSpell());
+    public static final Spell SELF_OPERATOR = registerSpell(new SelfOperator());
+    public static final Spell LOC_OPERATOR = registerSpell(new LocationOperator());
+    public static final Spell DIR_OPERATOR = registerSpell(new DirectionOperator());
+    public static final Spell RAYBLOCK_OPERATOR = registerSpell(new RaycastBlockOperator());
+    public static final Spell BREAK_BLOCK_SPELL = registerSpell(new BreakBlockSpell());
+    public static final Spell SHOW_ESSENCE_OPERATOR = registerSpell(new ShowEssenceOperator());
+    public static final Spell LITERAL_NOTES = registerSpell(new LiteralNotes());
+    public static final Spell EXECUTE = registerSpell(new Execute());
 
     public static boolean checkSpells(List<notes> notesToCheck, List<AbstractSymbol> stack, Player player, Level level)
     {
-        if(TESTING_SPELL.checkSpell(notesToCheck, stack, player, level)) return true;
-        if(CLEAR_STACK_OPERATOR.checkSpell(notesToCheck, stack, player, level)) return true;
-        if(REVEAL_STACK_SPELL.checkSpell(notesToCheck, stack, player, level)) return true;
-        if(SELF_OPERATOR.checkSpell(notesToCheck, stack, player, level)) return true;
-        if(LOC_OPERATOR.checkSpell(notesToCheck, stack, player, level)) return true;
-        if(DIR_OPERATOR.checkSpell(notesToCheck, stack, player, level)) return true;
-        if(RAYBLOCK_OPERATOR.checkSpell(notesToCheck, stack, player, level)) return true;
-        if(BREAK_BLOCK_SPELL.checkSpell(notesToCheck, stack, player, level)) return true;
-        if(SHOW_ESSENCE_OPERATOR.checkSpell(notesToCheck, stack, player, level)) return true;
+        for(Spell spell : spells)
+        {
+            if(spell.checkSpell(notesToCheck, stack, player, level)) return true;
+        }
         return false;
     }
 
@@ -60,8 +61,14 @@ public class ModSpells
         return (float) (itemPower*Math.pow((essencePercent), 10/itemPower));
     }
     
+    public static Spell registerSpell(Spell spell)
+    {
+        spells.add(spell);
+        return spell;
+    }
+
     public static void register()
     {
-        //unused
+        // do nothing
     }
 }

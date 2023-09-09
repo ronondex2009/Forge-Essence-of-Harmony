@@ -1,0 +1,13 @@
+{
+    "name": "Miscellaneous Motifs",
+    "icon": "minecraft:book",
+    "category": "essence_of_harmony:ocarina_category",
+    "pages": [
+        "Ocarina and above specific motifs.",
+        {
+            "type": "patchouli:text",
+            "title": "Essence's Peeker Motif",
+            "text": "Peeker's Variant of Essence's Motif. Prints essence in current stack to you.$(br2)$(1)$(l)D, F, E, F, C $()$(1)$(br)[] -> [] miscellaneous$(br)$(2)will always execute."
+        }
+    ]
+}

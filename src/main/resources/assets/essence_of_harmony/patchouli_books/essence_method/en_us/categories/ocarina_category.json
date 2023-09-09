@@ -1,0 +1,6 @@
+{
+    "name": "Ocarina Motifs",
+    "description": "A list of motifs that can only be cast by an ocarina or above.",
+    "icon": "essence_of_harmony:ocarina",
+    "parent": "essence_of_harmony:motifs_category"
+}

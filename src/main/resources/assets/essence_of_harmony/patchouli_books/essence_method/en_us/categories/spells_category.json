@@ -1,6 +1,6 @@
 {
-    "name": "Spells",
+    "name": "Spell Casting",
     "description": "I have figured out how to interact with this field! With the power of.. music?",
-    "icon": "essence_of_harmony:flute",
+    "icon": "essence_of_harmony:paper",
     "advancement": "essence_of_harmony:instrument"
 }

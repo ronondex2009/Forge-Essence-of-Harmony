@@ -18,7 +18,7 @@ import net.ronondex2009.essence_of_harmony.util.notes;
 public class BreakBlockSpell extends Spell
 {
     @Override
-    public boolean runSpell(List<AbstractSymbol> stack, Player player, Level level) 
+    public boolean runSpell(List<notes> notes, List<AbstractSymbol> stack, Player player, Level level) 
     {        
         if(stack.size()==0) return false;
         if(!(stack.get(stack.size()-1).getSymbolType().equals("Vector"))) return false;

@@ -18,7 +18,7 @@ public class DirectionOperator extends Spell {
 
     @Override
     @SuppressWarnings("null") //if the entity dissapears mid-tick like that, you might as well crash
-    public boolean runSpell(List<AbstractSymbol> stack, Player player, Level level) 
+    public boolean runSpell(List<notes> notes, List<AbstractSymbol> stack, Player player, Level level) 
     {
         if(stack.size()==0) return false;
         if(!(stack.get(stack.size()-1).getSymbolType().equals("Entity"))) return false;

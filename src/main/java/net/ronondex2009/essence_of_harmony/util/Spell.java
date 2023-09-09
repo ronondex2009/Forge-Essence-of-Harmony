@@ -25,10 +25,10 @@ public class Spell
         for(Item item : allowedInstruments)
             if(item.equals(player.getMainHandItem().getItem()))
                 isValid = true;
-        if(spellNotes.equals(notesToCheck)&&isValid) 
+        if((equalsAtBeginning(spellNotes, notesToCheck)) && isValid) 
         {
             power = ModSpells.getSpellPower(player.getMainHandItem().getItem(), player);
-            if(runSpell(stack, player, level))
+            if(runSpell(notesToCheck, stack, player, level))
             {
                 runEssenceDepleter(stack, player, level);
                 return true;
@@ -38,7 +38,7 @@ public class Spell
         else return false;
     }
 
-    public boolean runSpell(List<AbstractSymbol> stack, Player player, Level level)
+    public boolean runSpell(List<notes> notes, List<AbstractSymbol> stack, Player player, Level level)
     {
         return true;
     }
@@ -52,6 +52,16 @@ public class Spell
     {
         essenceMap.setEssence(player.chunkPosition(), essenceMap.getEssence(player.chunkPosition()) - value);
     }   
+
+    private Boolean equalsAtBeginning(List<notes> a, List<notes> b)
+    {
+        for(int i = 0; i<a.size(); i++)
+        {
+            if(b.size()<a.size()) return false;
+            if(!(a.get(i).equals(b.get(i)))) return false;
+        }
+        return true;
+    }
 
     //STACK FROM TOP-TO-BOTTOM IS LEFT-TO-RIGHT
     //NOTES ARE LEFT-TO-RIGHT FOR START-TO-FINISH
