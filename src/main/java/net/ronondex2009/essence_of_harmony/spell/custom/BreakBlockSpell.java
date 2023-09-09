@@ -15,7 +15,7 @@ import net.ronondex2009.essence_of_harmony.util.AbstractSymbol;
 import net.ronondex2009.essence_of_harmony.util.Spell;
 import net.ronondex2009.essence_of_harmony.util.notes;
 
-public class BreakBlockSpell extends Spell 
+public class BreakBlockSpell extends Spell
 {
     @Override
     public boolean runSpell(List<AbstractSymbol> stack, Player player, Level level) 

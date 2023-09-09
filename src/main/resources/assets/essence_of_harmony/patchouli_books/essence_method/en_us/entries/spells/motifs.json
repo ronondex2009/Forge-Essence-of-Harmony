@@ -7,43 +7,49 @@
         {
             "type": "patchouli:text",
             "title": "Mirror Motif",
-            "text": "outputs you, the caster, onto the stack as an entity symbol.$(br2)$(1)$(l) C, E, G, E $()$(1)$(br) [] -> [entity] operator$(br)$(2) will always execute."
+            "text": "outputs you, the caster, onto the stack as an entity symbol.$(br2)$(1)$(l)C, E, G, E $()$(1)$(br)[] -> [entity] operator$(br)$(2)will always execute."
         },
         {
             "type": "patchouli:text",
             "title": "Placement Motif",
-            "text": "inputs an entity, and outputs the location of that entity.$(br2)$(1)$(l) B, E, G, E  $()$(1)$(br) [entity] -> [vector] operator$(br)$(2) will always execute."
+            "text": "inputs an entity, and outputs the location of that entity.$(br2)$(1)$(l)B, E, G, E  $()$(1)$(br)[entity] -> [vector] operator$(br)$(2)will always execute."
         },
         {
             "type": "patchouli:text",
             "title": "Guide Motif",
-            "text": "inputs an entity, and outputs the direction that entity is facing.$(br2)$(1)$(l) D, F, A, F $()$(1)$(br) [entity] -> [vector] operator$(br)$(2) will always execute."
+            "text": "inputs an entity, and outputs the direction that entity is facing.$(br2)$(1)$(l)D, F, A, F $()$(1)$(br)[entity] -> [vector] operator$(br)$(2)will always execute."
         },
         {
             "type": "patchouli:text",
             "title": "Block-Clip Motif",
-            "text": "Use the essence of the world to cast a line through space; where does that line hit a block, or end? Has a base range of 20 blocks. Input a location, then direction, and outputs a location.$(br2)$(1)$(l) C, E, G, F, G, D, G, D $()$(1)$(br) [vector, vector] -> [vector] operator$(br)$(2) will always execute."
+            "text": "Use the essence of the world to cast a line through space; where does that line hit a block, or end? Has a base range of 20 blocks. Input a location, then direction, and outputs a location.$(br2)$(1)$(l)C, E, G, F, G, D, G, D $()$(1)$(br)[vector, vector] -> [vector] operator$(br)$(2)will always execute."
         }, 
         {
             "type": "patchouli:text",
             "title": "Break Block Motif",
-            "text": "Inputs a location and breaks a block at that location.$(br2)$(1)$(l) C, D, F, G, D, E, F, D $()$(1)$(br) [vector] -> [] Spell$(br)$(2) will always execute."
+            "text": "Inputs a location and breaks a block at that location.$(br2)$(1)$(l)C, D, F, G, D, E, F, D $()$(1)$(br)[vector] -> [] Spell$(br)$(2)will always execute."
         },
         {
             
             "type": "patchouli:text",
             "title": "Stack Wipe Motif",
-            "text": "Clears the entire stack.$(br2)$(1)$(l) G, E, D, E, C $()$(1)$(br) [ ... ] -> [] operator$(br)$(2) will always execute."
+            "text": "Clears the entire stack.$(br2)$(1)$(l)G, E, D, E, C $()$(1)$(br)[ ... ] -> [] operator$(br)$(2)will always execute."
         },
         {
             "type": "patchouli:text",
             "title": "Peeker Motif",
-            "text": "display the stack to you.$(br2)$(1)$(l) G, F, G, E, C $()$(1)$(br) [] -> [] miscellaneous$(br)$(2) will always execute."
+            "text": "display the stack to you.$(br2)$(1)$(l)G, F, G, E, C $()$(1)$(br)[] -> [] miscellaneous$(br)$(2)will always execute."
+        },        
+        {
+            "type": "patchouli:text",
+            "title": "Harmonic Motif",
+            "advancement": "essence_of_harmony:instrument_ocarina",
+            "text": "measure the essence in the chunk, and display it to you.$(br2)$(1)$(l)D, F, E, D $()$(1)$(br)[] -> [] miscellaneous$(br)$(6)ocarina and above:$(2) will always execute."
         },
         {
             "type": "patchouli:text",
             "title": "Programmer's Motif",
-            "text": "Debugger Spell, disabled in normal gameplay.$(br2)$(1)$(l) ? $()$(1)$(br) [?] -> [?] operator$(br)$(4) will never execute."
+            "text": "Debugger Spell, disabled in normal gameplay.$(br2)$(1)$(l)? $()$(1)$(br)[?] -> [?] operator$(br)$(4)will never execute."
         }
     ]
 }
